@@ -1,2 +1,2 @@
 #!/bin/bash
-git add . && git commit -m "task 3 print_string" && git push
+git add . && git commit -m "task 4 concat" && git push

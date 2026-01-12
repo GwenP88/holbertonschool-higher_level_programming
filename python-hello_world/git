@@ -1,2 +1,2 @@
 #!/bin/bash
-git add . && git commit -m "task 4 concat" && git push
+git add . && git commit -m "task 5 7-edges.py" && git push

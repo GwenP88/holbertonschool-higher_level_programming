@@ -15,6 +15,7 @@ def uppercase(str):
         if code >= 97 and code <= 122:
             new_code = code - 32
             new_c = chr(new_code)
-        new_string += new_c      
+        new_string += new_c
+              
     print("{}".format(new_string), end="")
     print()

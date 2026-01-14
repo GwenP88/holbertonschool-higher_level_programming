@@ -8,11 +8,13 @@ def uppercase(str):
     Print:
         the string in uppercase
     """
+    new_string = ""
     for c in str:
         new_c = c
         code = ord(c)
         if code >= 97 and code <= 122:
             new_code = code - 32
             new_c = chr(new_code)
-        print("{}".format(new_c), end="")
+        new_string += new_c      
+    print("{}".format(new_string), end="")
     print()

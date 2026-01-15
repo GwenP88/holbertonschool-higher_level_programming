@@ -1,3 +1,5 @@
+![ChatGPT Introduction Banner](assets/banner.png)
+
 # Python - Hello, World
 
 ## Description

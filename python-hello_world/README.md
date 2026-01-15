@@ -129,6 +129,5 @@ chmod +x *.py
 
 ## Author
 
-Gwenaëlle Pichot
-Holberton School – Web Development Student
+Gwenaëlle Pichot - Holberton School – Web Development Student
 

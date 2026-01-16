@@ -3,15 +3,17 @@ from calculator_1 import add, sub, mul, div
 import sys
 
 if __name__ == "__main__":
+    if len(sys.argv) != 4:
+        print("Usage: ./100-my_calculator.py <a> <operator> <b>")
+        print("1")
+        exit(1)
     a = int(sys.argv[1])
     b = int(sys.argv[3])
     operators = ["+", "-", "*", "/"]
     operator = sys.argv[2]
-    if len(sys.argv) != 4:
-        print("Usage: ./100-my_calculator.py <a> <operator> <b>")
-        exit(1)
     if operator not in operators:
         print("Unknown operator. Available operators: +, -, * and /")
+        print("1")
         exit(1)
     if operator == operators[0]:
         print("{} {} {} = {}".format(a, operator, b, add(a, b)))

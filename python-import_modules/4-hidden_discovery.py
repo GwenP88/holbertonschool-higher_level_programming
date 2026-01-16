@@ -6,7 +6,7 @@
 # Run it in the Holberton sandbox (or with Python 3.8) to get the expected output.
 
 
-import hidden_4
+import hidden_4 # type: ignore
 
 if __name__ == "__main__":
     names = sorted(dir(hidden_4))

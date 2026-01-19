@@ -1,3 +1,5 @@
+![Python Data Structures Banner](assets/banner.png)
+
 # Python – Data Structures: Lists, Tuples
 
 ## 📚 Description

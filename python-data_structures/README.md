@@ -54,9 +54,6 @@ python-data_structures/
 ├── 12-switch.py
 └── README.md
 
-yaml
-Copier le code
-
 ---
 
 ## 🧩 Tasks Overview

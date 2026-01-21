@@ -102,8 +102,6 @@ Constraints:
 
 ## Author
 
-## Author
-
 **Gwenaelle PICHOT**  
 Student at Holberton School  
 Track: Higher Level Programming  

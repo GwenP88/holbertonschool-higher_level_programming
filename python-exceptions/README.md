@@ -10,13 +10,6 @@ Exception handling is a key concept in Python that allows programs to **fail gra
 
 ---
 
-## Resources
-Read or watch:
-- Errors and Exceptions (Python documentation)
-- Learn to Program 11 – Static & Exception Handling (from minute 7)
-
----
-
 ## Learning Objectives
 At the end of this project, you should be able to explain, without external help:
 

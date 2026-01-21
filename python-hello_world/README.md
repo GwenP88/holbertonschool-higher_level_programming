@@ -27,10 +27,6 @@ By the end of this project, you should be able to explain:
   - at the root of the repository
   - at the root of this project directory
 
-## Repository
-- GitHub repository: `holbertonschool-higher_level_programming`
-- Project directory: `python-hello_world`
-
 ## Files and Tasks
 
 ### `2-print.py` — Hello, print
@@ -104,32 +100,12 @@ Constraints:
 
 ---
 
-## Style Check
-```
-pycodestyle *.py
-```
-
----
-
-## Execution
-```
-chmod +x *.py
-./2-print.py
-```
-
----
-
-## Resources
-
-- Python Tutorial: Modules and Standard Library
-- Using the Python Interpreter
-- An Informal Introduction to Python (up to “3.1.2. Strings”)
-- String formatting in Python 3
-- Pycodestyle (PEP8 / PyCode)
-
----
+## Author
 
 ## Author
 
-Gwenaëlle Pichot - Holberton School – Web Development Student
+**Gwenaelle PICHOT**  
+Student at Holberton School  
+Track: Higher Level Programming  
+Project: Python - Hello World!
 

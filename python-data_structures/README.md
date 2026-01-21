@@ -2,7 +2,7 @@
 
 # Python – Data Structures: Lists, Tuples
 
-## 📚 Description
+## Description
 This project is part of the **Holberton School – Higher Level Programming** curriculum.  
 It focuses on understanding and using **Python data structures**, mainly **lists** and **tuples**, through a series of practical functions.
 
@@ -10,7 +10,7 @@ The goal is to learn how to manipulate collections of data efficiently while res
 
 ---
 
-## 🎯 Learning Objectives
+## Learning Objectives
 At the end of this project, you should be able to explain, without external help:
 
 - What lists are and how to use them
@@ -25,7 +25,7 @@ At the end of this project, you should be able to explain, without external help
 
 ---
 
-## ⚙️ Requirements
+## Requirements
 - **Language:** Python 3.8.5  
 - **OS:** Ubuntu 20.04 LTS  
 - **Editors:** `vi`, `vim`, `emacs`
@@ -39,7 +39,7 @@ At the end of this project, you should be able to explain, without external help
 
 ---
 
-## 📁 Project Structure
+## Project Structure
 python-data_structures/
 ├── 0-print_list_integer.py
 ├── 1-element_at.py
@@ -58,7 +58,7 @@ python-data_structures/
 
 ---
 
-## 🧩 Tasks Overview
+## Tasks Overview
 
 ### 0. Print a list of integers
 Prints each integer from a list on a new line using `str.format()`.
@@ -101,16 +101,9 @@ Swaps the values of two variables in exactly 5 lines of code.
 
 ---
 
-## 🚀 How to Run
-Make sure the file is executable, then run:
-```
-./filename.py
-```
+## Author
 
-Example:
-```
-./0-print_list_integer.py
-```
-
-✨ Author
-Holberton School Student – Higher Level Programming - Gwenaelle PICHOT
+**Gwenaelle PICHOT**  
+Student at Holberton School  
+Track: Higher Level Programming  
+Project: Python - Date & structure (part 1)

@@ -30,10 +30,7 @@ At the end of this project, you should be able to explain, without external help
 - OS: Ubuntu 20.04 LTS
 - Python version: `python3` (3.8.5)
 - All files must end with a new line
-- The first line of all files must be exactly:
-  ```
-  #!/usr/bin/python3
-  ```
+- The first line of all files must be exactly: `#!/usr/bin/python3`
 - A README.md file at the root of the project is mandatory
 - Code must follow pycodestyle (version 2.7.*)
 - All files must be executable

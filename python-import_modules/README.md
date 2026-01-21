@@ -8,16 +8,12 @@ This project focuses on understanding how Python modules work, how to import fun
 
 ## Learning Objectives
 
-At the end of this project, you should be able to explain, without using Google:
+During this project, I learned why Python programming is so awesome: it is readable, powerful, and it usually does what you expect without unnecessary drama. 
+I learned how to import functions from another file and how to actually use those imported functions without breaking everything.
 
-### General
-- Why Python programming is awesome  
-- How to import functions from another file  
-- How to use imported functions  
-- How to create a module  
-- How to use the built-in function `dir()`  
-- How to prevent code in your script from being executed when imported  
-- How to use command line arguments with your Python programs  
+I also learned how to create my own modules, how to explore what they contain using the built-in `dir()` function, and how to prevent parts of a script from running when the file is imported instead of executed directly (because sometimes Python needs clear boundaries).
+
+Finally, I learned how to use command line arguments with Python programs, which made my scripts feel much more flexible, professional, and slightly less “toy example”.
 
 ---
 
@@ -204,8 +200,3 @@ Rules:
 Student at Holberton School  
 Track: Higher Level Programming  
 Project: Python - Import & modules
-
-
-
-
-

@@ -9,22 +9,15 @@ You will practice using `if/else`, `while` and `for` loops, basic arithmetic ope
 ---
 
 ## Learning Objectives
-By the end of this project, you should be able to explain:
 
-- Why **indentation** is so important in Python
-- How to use `if`, `if ... else`
-- How to use comments
-- How to assign values to variables
-- How to use `while` and `for` loops
-- How to use `break` and `continue`
-- How to use `else` clauses on loops
-- What `pass` does and when to use it
-- How to use `range()`
-- What a function is and how to use functions
-- What a function returns if it has no `return` statement
-- Variable scope
-- What a traceback is
-- Arithmetic operators and how to use them
+During this project, I learned why indentation is sacred in Python (one wrong space and everything falls apart). I learned how to use `if` and `if…else` statements to make decisions, how to write useful comments, and how to assign values to variables without confusing myself later.
+
+I learned how to use `while` and `for` loops, when to use `break` to escape and `continue` to skip ahead, and how `else` clauses on loops can exist and actually make sense. 
+I also discovered what `pass` does and when it is useful, especially when Python demands something but I am not ready yet.
+
+I learned how to use `range()` to control loops, what a function is, how to use functions, and what a function returns when there is no `return` statement (spoiler: `None`). 
+I understood variable scope, what a traceback is and how to read it without panic, and how to use arithmetic operators correctly to make Python do real calculations instead of just printing text.
+
 
 ---
 

@@ -11,16 +11,11 @@ Exception handling is a key concept in Python that allows programs to **fail gra
 ---
 
 ## Learning Objectives
-At the end of this project, you should be able to explain, without external help:
 
-- Why Python programming is awesome
-- The difference between errors and exceptions
-- What exceptions are and how to use them
-- When exceptions should be used
-- How to correctly handle an exception
-- The purpose of catching exceptions
-- How to raise a built-in exception
-- When and why to implement a clean-up action after an exception
+During this project, I learned why Python programming is considered powerful and enjoyable, mainly because of its clear syntax and its ability to handle unexpected situations in a clean and readable way. I understood the difference between errors and exceptions, and how exceptions make it possible to manage abnormal situations without stopping the entire program abruptly.
+I learned what exceptions are and how to use them correctly in Python, whether they are raised automatically by the interpreter or manually by the developer when a specific condition is not respected. I also learned when exceptions should be used, especially to handle exceptional cases rather than relying on multiple conditional checks that would make the code harder to read and maintain.
+Through practice, I learned how to correctly handle exceptions using `try` and `except` blocks, and how this mechanism helps keep programs robust and predictable. I understood the purpose of catching exceptions: to prevent crashes, display meaningful error messages, and allow the program to continue or exit gracefully.
+I also learned how to raise built-in exceptions intentionally to signal an error situation in a clear and controlled way. Finally, I learned when and why it is important to implement clean-up actions after an exception, such as releasing resources or closing files, in order to ensure program stability and avoid resource leaks.
 
 ---
 

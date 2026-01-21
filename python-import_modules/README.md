@@ -132,6 +132,72 @@ Rules:
 
 ---
 
+### 6. Build my own calculator!
+**#advanced**  
+**File:** `100-my_calculator.py`
+
+- Imports all functions from `calculator_1.py`
+- Handles basic operations between two integers
+- Usage: `./100-my_calculator.py <a> <operator> <b>`
+- If the number of arguments is not 3:
+  - Prints `Usage: ./100-my_calculator.py <a> <operator> <b>`
+  - Exits with status `1`
+- Supported operators:
+  - `+` for addition
+  - `-` for subtraction
+  - `*` for multiplication
+  - `/` for division
+- If the operator is invalid:
+  - Prints `Unknown operator. Available operators: +, -, * and /`
+  - Exits with status `1`
+- Casts arguments to integers using `int()`
+- Prints the result as: `<a> <operator> <b> = <result>`
+- Does not use `*` for importing or `__import__`
+- Code must not execute when imported
+
+---
+
+### 7. Easy print
+**#advanced**  
+**File:** `101-easy_print.py`
+
+- Prints `#pythoniscool` followed by a new line
+- Program length: maximum **2 lines**
+- Does **not** use:
+  - `print`
+  - `eval`
+  - `open`
+  - `import sys`
+
+---
+
+### 8. ByteCode → Python #3
+**#advanced**  
+**File:** `102-magic_calculation.py`
+
+- Implements the function `magic_calculation(a, b)`
+- The function must behave **exactly** like the provided Python bytecode
+- Uses imported functions `add` and `sub` from `magic_calculation_102`
+- Requires understanding of Python bytecode translation
+- Tip provided: *Python bytecode*
+
+---
+
+### 9. Fast alphabet
+**#advanced**  
+**File:** `103-fast_alphabet.py`
+
+- Prints the alphabet in **uppercase**, followed by a new line
+- Program length: maximum **3 lines**
+- Does **not** use:
+  - Any loops
+  - Any conditional statements
+  - `str.join()`
+  - Any string literal
+  - Any system calls
+
+---
+
 ## Author
 
 **Gwenaelle PICHOT**  

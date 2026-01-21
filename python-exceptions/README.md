@@ -2,9 +2,6 @@
 
 # Python - Exceptions
 
-## Project Badge
-**0%**
-
 ## Description
 This project is an introduction to **exception handling in Python**.  
 It focuses on understanding the difference between errors and exceptions, learning how to handle runtime errors properly using `try`, `except`, `else`, and `finally`, and knowing when and how to raise exceptions intentionally.

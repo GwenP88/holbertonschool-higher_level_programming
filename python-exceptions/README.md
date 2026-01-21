@@ -12,10 +12,13 @@ Exception handling is a key concept in Python that allows programs to **fail gra
 
 ## Learning Objectives
 
-During this project, I learned why Python programming is considered powerful and enjoyable, mainly because of its clear syntax and its ability to handle unexpected situations in a clean and readable way. I understood the difference between errors and exceptions, and how exceptions make it possible to manage abnormal situations without stopping the entire program abruptly.
-I learned what exceptions are and how to use them correctly in Python, whether they are raised automatically by the interpreter or manually by the developer when a specific condition is not respected. I also learned when exceptions should be used, especially to handle exceptional cases rather than relying on multiple conditional checks that would make the code harder to read and maintain.
-Through practice, I learned how to correctly handle exceptions using `try` and `except` blocks, and how this mechanism helps keep programs robust and predictable. I understood the purpose of catching exceptions: to prevent crashes, display meaningful error messages, and allow the program to continue or exit gracefully.
-I also learned how to raise built-in exceptions intentionally to signal an error situation in a clear and controlled way. Finally, I learned when and why it is important to implement clean-up actions after an exception, such as releasing resources or closing files, in order to ensure program stability and avoid resource leaks.
+During this project, I learned why Python is so enjoyable to work with: its syntax is clear, readable, and it knows how to handle problems without panicking. 
+I understood the difference between errors and exceptions, and why exceptions exist to prevent a program from crashing at the first unexpected issue.
+
+I learned how to use exceptions properly, when to catch them, when to raise them, and how to handle them cleanly using `try` and `except`. 
+I also understood why catching exceptions is important: to keep the program under control, display useful error messages, and avoid dramatic exits.
+
+Finally, I learned the importance of cleaning up after an exception (because leaving a mess is never a good idea), such as closing files or freeing resources, to keep the program stable and well-behaved.
 
 ---
 

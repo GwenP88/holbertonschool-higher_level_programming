@@ -6,8 +6,6 @@
 This project is an introduction to **control flow** and **functions** in Python.  
 You will practice using `if/else`, `while` and `for` loops, basic arithmetic operators, and writing simple functions while respecting **pycodestyle** rules.
 
-> Note: You do not need to understand lists yet.
-
 ---
 
 ## Learning Objectives
@@ -30,21 +28,6 @@ By the end of this project, you should be able to explain:
 
 ---
 
-## Resources
-Read or watch:
-
-- **More Control Flow Tools** (read until “4.6. Defining Functions” included)
-- IndentationError
-- How To Use String Formatters in Python 3
-- Learn to Program 2 : Looping
-- Pycodestyle – Style Guide for Python Code
-
-Man or help:
-
-- `python3`
-
----
-
 ## Requirements
 
 ### Python Scripts
@@ -56,12 +39,6 @@ Man or help:
 - Code must follow **pycodestyle (version 2.7.\*)**
 - All files must be executable
 - File length will be tested using `wc`
-
----
-
-## Project Structure
-Repository: `holbertonschool-higher_level_programming`  
-Directory: `python-if_else_loops_functions`
 
 ---
 
@@ -260,20 +237,9 @@ Constraints:
 
 ---
 
-## Usage
-Run any script like this:
-
-```
-./<filename>.py
-```
-Example:
-
-```
-./0-positive_or_negative.py
-```
-
----
-
 ## Author
 
-Gwenaëlle Pichot - Holberton School – Web Development Student
+**Gwenaelle PICHOT**  
+Student at Holberton School  
+Track: Higher Level Programming  
+Project: Python - If, else, loops & functions

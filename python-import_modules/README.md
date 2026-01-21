@@ -6,18 +6,6 @@ This project focuses on understanding how Python modules work, how to import fun
 
 ---
 
-## Resources
-
-Read or watch:
-- Modules  
-- Command line arguments  
-- Pycodestyle – Style Guide for Python Code  
-
-Man or help:
-- `python3`
-
----
-
 ## Learning Objectives
 
 At the end of this project, you should be able to explain, without using Google:
@@ -144,23 +132,12 @@ Rules:
 
 ---
 
-## Repository Information
-
-- **GitHub repository:** `holbertonschool-higher_level_programming`
-- **Directory:** `python-import_modules`
-- **Files:**
-  - `0-add.py`
-  - `1-calculation.py`
-  - `2-args.py`
-  - `3-infinite_add.py`
-  - `4-hidden_discovery.py`
-  - `5-variable_load.py`
-
----
-
 ## Author
 
-Gwenaëlle Pichot - Holberton School – Web Development Student
+**Gwenaelle PICHOT**  
+Student at Holberton School  
+Track: Higher Level Programming  
+Project: Python - Import & modules
 
 
 

@@ -8,9 +8,6 @@ This project focuses on practicing **Python data structures** beyond lists and t
 - **Dictionaries** (key/value pairs, iteration, updates)
 - **Lambda functions** and functional tools like **map**, **filter**, and **reduce**
 
-All tasks are part of the repository **holbertonschool-higher_level_programming**, inside the folder:
-`python-more_data_structures`.
-
 ---
 
 ## Learning Objectives
@@ -24,18 +21,6 @@ By the end of this project, you should be able to explain:
 - How to iterate over a dictionary
 - What a **lambda** function is
 - What **map**, **filter**, and **reduce** do (and when to use them)
-
----
-
-## Resources
-Read or watch:
-- Data structures
-- Lambda, filter, reduce and map
-- Learn to Program 12 Lambda Map Filter Reduce
-
-Useful commands:
-- `man python3`
-- `help()` in Python
 
 ---
 
@@ -147,24 +132,11 @@ Converts a Roman numeral string to an integer.
 - Assumes range: **1 to 3999**
 - If `roman_string` is not a string or is `None`, return `0`
 
----
-
-## Usage
-### Example (task 0):
-```
-./0-main.py
-```
-
-### General run pattern:
-```
-./<task>-main.py
-```
-
----
 
 ## Author
 
 **Gwenaelle PICHOT**  
 Student at Holberton School  
 Track: Higher Level Programming  
-Project: Python - More Data Structures
+Project: Python - Data & Structures (part 2)
+

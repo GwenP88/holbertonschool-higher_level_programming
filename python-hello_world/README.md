@@ -5,13 +5,17 @@
 ## Description
 This project is an introduction to Python scripting at Holberton School. It focuses on using the Python interpreter, printing text and variables, working with strings (including indexing and slicing), and following the official Python coding style with **pycodestyle** (PEP8 / PyCode).
 
+---
+
 ## Learning Objectives
-By the end of this project, you should be able to explain:
-- How to use the Python interpreter
-- How to print text and variables using `print()`
-- How to use strings in Python
-- What indexing and slicing are
-- What the official Python coding style is and how to check code with `pycodestyle`
+
+During this project, I learned how to use the Python interpreter and actually understand what it is doing instead of just hoping for the best. 
+I learned how to print text and variables properly using `print()`, and how to work with strings without getting lost in quotes.
+
+I discovered how indexing and slicing work, which made accessing parts of a string much more precise (and much less random). 
+Finally, I learned what the official Python coding style is, why it matters, and how to check my code with `pycodestyle` so Python — and reviewers — stay happy.
+
+---
 
 ## Requirements
 ### Python Scripts
@@ -26,6 +30,8 @@ By the end of this project, you should be able to explain:
 - A `README.md` is required:
   - at the root of the repository
   - at the root of this project directory
+
+---
 
 ## Files and Tasks
 

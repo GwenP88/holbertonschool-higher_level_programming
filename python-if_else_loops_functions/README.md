@@ -237,6 +237,33 @@ Constraints:
 
 ---
 
+### 13. Smile in the mirror
+**#advanced**  
+**File:** `100-print_tebahpla.py`
+
+- Prints the ASCII alphabet in reverse order  
+- Alternates lowercase and uppercase letters  
+  - Starts with `z` in lowercase, then `Y` in uppercase  
+- Output is **not** followed by a new line  
+- Uses **only one** `print` function with string formatting  
+- Uses **only one** loop  
+- Does **not** store characters in variables  
+- Does **not** import any module  
+
+---
+
+### 14. Remove at position
+**#advanced**  
+**File:** `101-remove_char_at.py`
+
+- Creates a copy of a string without the character at position `n`  
+- Indexing follows C-style logic (not Python slicing shortcuts)  
+- Returns the original string if `n` is out of range or negative  
+- Uses **no** module imports  
+- Does not require understanding of `__import__`  
+
+---
+
 ## Author
 
 **Gwenaelle PICHOT**  

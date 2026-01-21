@@ -11,21 +11,20 @@ The goal is to learn how to manipulate collections of data efficiently while res
 ---
 
 ## Learning Objectives
-At the end of this project, you should be able to explain, without external help:
 
-- What lists are and how to use them
-- Differences and similarities between lists and strings
-- Common list methods and their usage
-- How to use lists as stacks and queues
-- What list comprehensions are
-- What tuples are and when to use them instead of lists
-- What a sequence is
-- Tuple packing and sequence unpacking
-- How the `del` statement works
+During this project, I learned what lists are and how to use them efficiently to store and manipulate multiple values in a single variable. 
+I discovered the similarities between lists and strings (they both love being indexed) as well as their differences (lists are flexible, strings… much less).
+
+I learned how to use common list methods without fighting with the documentation every five minutes, and how lists can behave like stacks or queues depending on how you use them. 
+I also learned what list comprehensions are, and how they make the code shorter, cleaner, and slightly more satisfying to read.
+
+I learned what tuples are and when it is smarter to use them instead of lists, especially when data should not be modified. 
+Along the way, I understood what a sequence is in Python, how tuple packing and sequence unpacking work, and how the `del` statement can make things disappear (sometimes a bit too efficiently).
 
 ---
 
 ## Requirements
+
 - **Language:** Python 3.8.5  
 - **OS:** Ubuntu 20.04 LTS  
 - **Editors:** `vi`, `vim`, `emacs`
@@ -36,25 +35,6 @@ At the end of this project, you should be able to explain, without external help
   - Follow **pycodestyle** (version 2.7.\*)
 - No external modules allowed unless specified
 - File length is checked using `wc`
-
----
-
-## Project Structure
-python-data_structures/
-├── 0-print_list_integer.py
-├── 1-element_at.py
-├── 2-replace_in_list.py
-├── 3-print_reversed_list_integer.py
-├── 4-new_in_list.py
-├── 5-no_c.py
-├── 6-print_matrix_integer.py
-├── 7-add_tuple.py
-├── 8-multiple_returns.py
-├── 9-max_integer.py
-├── 10-divisible_by_2.py
-├── 11-delete_at.py
-├── 12-switch.py
-└── README.md
 
 ---
 

@@ -116,6 +116,70 @@ At the end of this project, you should be able to explain, without external help
 
 ---
 
+## Advanced Tasks – Python Exceptions
+
+### 7. Safe integer print with error message
+
+**File:** `100-safe_print_integer_err.py`  
+**Prototype:** `def safe_print_integer_err(value):`
+
+This function safely prints an integer value.
+
+- The value is printed followed by a new line **only if it is an integer**
+- Uses `try / except` to handle errors
+- Uses `"{:d}".format()` to format the integer
+- Does **not** use `type()`
+- If the value is **not** an integer:
+  - Returns `False`
+  - Prints the error message to **stderr**, preceded by `Exception:`
+- Returns `True` if the integer is printed correctly
+
+This task focuses on exception handling, output formatting, and stderr usage.
+
+---
+
+### 8. Safe function
+
+**File:** `101-safe_function.py`  
+**Prototype:** `def safe_function(fct, *args):`
+
+This function executes another function safely.
+
+- `fct` is always a valid function reference
+- Executes the function with its arguments
+- Returns the function result if execution succeeds
+- If an exception occurs:
+  - Prints the error message to **stderr**, preceded by `Exception:`
+  - Returns `None`
+- Uses `try / except`
+
+This task reinforces safe execution patterns and generic exception handling.
+
+---
+
+### 9. ByteCode → Python #4
+
+**File:** `102-magic_calculation.py`  
+**Prototype:** `def magic_calculation(a, b):`
+
+This function reproduces **exactly** the behavior of a given Python bytecode.
+
+Key characteristics:
+- Initializes a result variable
+- Iterates over a range
+- Uses a `try / except` block inside a loop
+- Raises a custom exception when a condition is met
+- Performs arithmetic operations involving:
+  - Power
+  - Division
+  - In-place addition
+- Handles exceptions by updating the result and breaking the loop
+- Returns the final computed result
+
+This task emphasizes understanding Python bytecode and translating low-level operations into valid Python logic.
+
+---
+
 ## Author
 
 **Gwenaelle PICHOT**  

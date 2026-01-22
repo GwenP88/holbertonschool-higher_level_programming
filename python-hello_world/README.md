@@ -5,8 +5,6 @@
 ## Description
 This project is an introduction to Python scripting at Holberton School. It focuses on using the Python interpreter, printing text and variables, working with strings (including indexing and slicing), and following the official Python coding style with **pycodestyle** (PEP8 / PyCode).
 
-![Progress](https://img.shields.io/badge/Progress-Mandatory%20100%25-success)
-
 ---
 
 ## Learning Objectives

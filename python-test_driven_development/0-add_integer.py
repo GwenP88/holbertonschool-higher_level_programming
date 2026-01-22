@@ -1,8 +1,9 @@
 #!/usr/bin/python3
-
-"""This module provides a simple arithmetic helper function.
+"""
+This module provides a simple arithmetic helper function.
 It defines add_integer() to add two numbers after validating their types.
 """
+
 
 def add_integer(a, b=98):
     """
@@ -19,16 +20,12 @@ def add_integer(a, b=98):
         TypeError: If a or b is not an integer or a float.
     """
 
-    if not (type(a) == int or type(a) == float):
+    if not (type(a) is int or type(a) is float):
         raise TypeError("a must be an integer")
-    
-    if not (type(b) == int or type(b) == float):
+    if not (type(b) is int or type(b) is float):
         raise TypeError("b must be an integer")
-
-    if type(a) == float:
+    if type(a) is float:
         a = int(a)
-   
-    if type(b) == float:
+    if type(b) is float:
         b = int(b)
-    
     return (a + b)

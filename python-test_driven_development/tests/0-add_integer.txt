@@ -1,6 +1,6 @@
 Tests for the add_integer function.
 
-add_integer = __import__("0-add_integer").add_integer
+>>> add_integer = __import__("0-add_integer").add_integer
 
 >>> add_integer(4, 6)
 10

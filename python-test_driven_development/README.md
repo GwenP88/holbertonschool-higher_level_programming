@@ -17,16 +17,13 @@ You will practice:
 
 ## Learning Objectives
 
-By the end of this project, you should be able to explain:
+Through this project, I learned that testing is not optional—it’s the safety net that prevents my code from embarrassing me later. 
+Writing tests first forced me to clearly define what a function should do before letting it do anything at all.
 
-- Why Python programming is awesome
-- What an interactive test is
-- Why testing is important
-- How to write docstrings that generate tests
-- How to document modules and functions properly
-- How to use basic doctest option flags
-- How to identify and test edge cases
-- Why you should never trust user input
+Using docstrings with doctest showed me that documentation can do more than look pretty: it can actively catch mistakes. 
+I also learned to hunt down edge cases, because users have a special talent for doing things the code was never meant to handle.
+
+In the end, this project taught me that tests don’t slow development down—they save time, protect sanity, and keep bugs from throwing surprise parties in production.
 
 ---
 
@@ -112,3 +109,4 @@ This project focuses on building strong habits:
 Student at Holberton School  
 Track: Higher Level Programming  
 Project: Python -Test-Driven development
+

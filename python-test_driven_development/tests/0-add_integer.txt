@@ -1,0 +1,38 @@
+Tests for the add_integer function.
+add_integer = __import__("0-add_integer").add_integer
+
+>>> add_integer(4, 6)
+10
+
+>>> add_integer(100, -5)
+95
+
+>>> add_integer(10)
+108
+
+>>> add_integer(95.5, -5)
+90
+
+>>> add_integer(10.8, 56.4)
+66
+
+>>> add_integer(-10.8, 56.4)
+46
+
+>>> add_integer(-10.8, -56.4)
+-66
+
+>>> add_integer(4, "School")
+Traceback (most recent call last):
+...
+TypeError: b must be an integer
+
+>>> add_integer(None)
+Traceback (most recent call last):
+...
+TypeError: a must be an integer
+
+>>> add_integer("python", "is fun")
+Traceback (most recent call last):
+...
+TypeError: a must be an integer

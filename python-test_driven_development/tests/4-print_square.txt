@@ -1,0 +1,89 @@
+Tests for the print_square function
+
+>>> print_square = __import__("4-print_square").print_square
+
+
+>>> # -------------------------
+# Valid cases (happy path)
+>>> # -------------------------
+
+
+>>> print_square(4)
+####
+####
+####
+####
+
+>>> print_square(10)
+##########
+##########
+##########
+##########
+##########
+##########
+##########
+##########
+##########
+##########
+
+>>> print_square(0)
+
+
+>>> print_square(1)
+#
+
+
+>>> # ------------------------
+# element type validation
+>>> # ------------------------
+
+
+>>> print_square("a")
+Traceback (most recent call last):
+...
+TypeError: size must be an integer
+
+>>> print_square("white")
+Traceback (most recent call last):
+...
+TypeError: size must be an integer
+
+>>> print_square("1")
+Traceback (most recent call last):
+...
+TypeError: size must be an integer
+
+>>> print_square(1.0)
+Traceback (most recent call last):
+...
+TypeError: size must be an integer
+
+>>> print_square(-1.0)
+Traceback (most recent call last):
+...
+TypeError: size must be an integer
+
+>>> print_square([])
+Traceback (most recent call last):
+...
+TypeError: size must be an integer
+
+>>> print_square({})
+Traceback (most recent call last):
+...
+TypeError: size must be an integer
+
+>>> print_square(None)
+Traceback (most recent call last):
+...
+TypeError: size must be an integer
+
+
+>>> # -----------------------------------
+# element value validation - less than 0
+>>> # -----------------------------------
+
+>>> print_square(-1)
+Traceback (most recent call last):
+...
+ValueError: size must be >= 0

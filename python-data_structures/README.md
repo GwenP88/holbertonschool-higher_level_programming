@@ -13,7 +13,7 @@ The goal is to learn how to manipulate collections of data efficiently while res
 ## Project Progress
 
 <p align="center">
-  <img src="assets/progress-mandatory-100.gif" alt="Mandatory tasks progress" width="80%">
+  <img src="assets/progress_barre_100.gif" alt="Mandatory tasks progress" width="80%">
 </p>
 
 <p align="center">

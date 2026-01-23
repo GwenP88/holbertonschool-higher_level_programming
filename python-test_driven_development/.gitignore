@@ -39,10 +39,6 @@ Desktop.ini
 # Local / accidental stuff #
 ############################
 
-# A folder/file named "git" (like in your project tree)
-git
-git/
-
 # Logs / temp
 *.log
 *.tmp

@@ -10,6 +10,18 @@ The goal is to learn how to manipulate collections of data efficiently while res
 
 ---
 
+## Project Progress
+
+<p align="center">
+  <img src="assets/progress-mandatory-100.gif" alt="Mandatory tasks progress" width="80%">
+</p>
+
+<p align="center">
+  <sub>Mandatory tasks completion: 100%</sub>
+</p>
+
+---
+
 ## Learning Objectives
 
 During this project, I learned what lists are and how to use them efficiently to store and manipulate multiple values in a single variable. 

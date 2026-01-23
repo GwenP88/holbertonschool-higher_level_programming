@@ -1,0 +1,87 @@
+Tests for the text_indentation function
+
+>>> text_indentation = __import__("5-text_indentation").text_indentation
+
+
+>>> # -------------------------
+>>> # Valid cases (happy path)
+>>> # -------------------------
+
+>>> text_indentation("Bonjour. Python is fun? liste:")
+Bonjour.
+<BLANKLINE>
+<BLANKLINE>
+Python is fun?
+<BLANKLINE>
+<BLANKLINE>
+liste:
+<BLANKLINE>
+<BLANKLINE>
+
+>>> text_indentation("Bonjour! je suis Gwen | ou Gwenaelle - je ne sais pas ...")
+Bonjour! je suis Gwen | ou Gwenaelle - je ne sais pas .
+<BLANKLINE>
+<BLANKLINE>
+.
+<BLANKLINE>
+<BLANKLINE>
+.
+<BLANKLINE>
+<BLANKLINE>
+
+>>> text_indentation("c")
+c
+
+>>> text_indentation("")
+
+>>> text_indentation('abc')
+abc
+
+>>> text_indentation("243")
+243
+
+>>> text_indentation("    hello: world    !?    coucou.    salut")
+hello:
+<BLANKLINE>
+<BLANKLINE>
+world    !?
+<BLANKLINE>
+<BLANKLINE>
+coucou.
+<BLANKLINE>
+<BLANKLINE>
+salut
+
+>>> # ------------------------
+>>> # element type validation
+>>> # ------------------------
+
+>>> text_indentation(("c","a"))
+Traceback (most recent call last):
+...
+TypeError: text must be a string
+
+>>> text_indentation({"c"})
+Traceback (most recent call last):
+...
+TypeError: text must be a string
+
+>>> text_indentation(["c"])
+Traceback (most recent call last):
+...
+TypeError: text must be a string
+
+>>> text_indentation(None)
+Traceback (most recent call last):
+...
+TypeError: text must be a string
+
+>>> text_indentation(1)
+Traceback (most recent call last):
+...
+TypeError: text must be a string
+
+>>> text_indentation(3.14)
+Traceback (most recent call last):
+...
+TypeError: text must be a string

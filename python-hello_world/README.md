@@ -36,7 +36,7 @@ Finally, I learned what the official Python coding style is, why it matters, and
 ## Project Progress
 
 <p align="center">
-  <img src="assets/progress_barre_100.gif" alt="Mandatory tasks progress" width="100%">
+  <img src="assets/progress_barre_100.gif" alt="Mandatory tasks progress" width="80%">
 </p>
 
 <p align="center">

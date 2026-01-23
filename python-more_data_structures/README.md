@@ -38,6 +38,18 @@ By the end of this project, you should be able to explain:
 
 ---
 
+## Project Progress
+
+<p align="center">
+  <img src="assets/progress_barre_100.gif" alt="Mandatory tasks progress" width="80%">
+</p>
+
+<p align="center">
+  <sub>Mandatory tasks completion: 100% ---  Advanced tasks completion: 100%</sub>
+</p>
+
+---
+
 ## Project Files & Tasks
 
 ### 0. Squared simple
@@ -194,3 +206,4 @@ Write a function that deletes keys with a specific value in a dictionary.
 Student at Holberton School  
 Track: Higher Level Programming  
 Project: Python - Data & Structures (part 2)
+

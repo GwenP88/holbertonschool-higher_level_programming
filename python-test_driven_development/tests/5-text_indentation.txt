@@ -10,23 +10,17 @@ Tests for the text_indentation function
 >>> text_indentation("Bonjour. Python is fun? liste:")
 Bonjour.
 <BLANKLINE>
-<BLANKLINE>
 Python is fun?
 <BLANKLINE>
-<BLANKLINE>
 liste:
-<BLANKLINE>
 <BLANKLINE>
 
 >>> text_indentation("Bonjour! je suis Gwen | ou Gwenaelle - je ne sais pas ...")
 Bonjour! je suis Gwen | ou Gwenaelle - je ne sais pas .
 <BLANKLINE>
-<BLANKLINE>
 .
 <BLANKLINE>
-<BLANKLINE>
 .
-<BLANKLINE>
 <BLANKLINE>
 
 >>> text_indentation("c")
@@ -43,12 +37,9 @@ abc
 >>> text_indentation("    hello: world    !?    coucou.    salut")
 hello:
 <BLANKLINE>
-<BLANKLINE>
 world    !?
 <BLANKLINE>
-<BLANKLINE>
 coucou.
-<BLANKLINE>
 <BLANKLINE>
 salut
 

@@ -30,20 +30,15 @@ def text_indentation(text):
     if not isinstance(text, str):
         raise TypeError("text must be a string")
 
-    flag_separator = False
     line = ""
     for c in text:
         if c in ".?:":
-            flag_separator = True
             line += c
             print(line.strip())
-            print()
             print()
             line = ""
         else:
             line += c
     if line.strip():
-        if flag_separator:
-            print(line.strip())
-        else:
-            print(line.strip(), end="")
+        print(line.strip(), end="")
+           

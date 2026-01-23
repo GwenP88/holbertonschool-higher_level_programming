@@ -38,6 +38,18 @@ Along the way, I understood what a sequence is in Python, how tuple packing and 
 
 ---
 
+## Project Progress
+
+<p align="center">
+  <img src="assets/progress-mandatory-100.gif" alt="Mandatory tasks progress" width="80%">
+</p>
+
+<p align="center">
+  <sub>Mandatory tasks completion: 100%</sub>
+</p>
+
+---
+
 ## Tasks Overview
 
 ### 0. Print a list of integers

@@ -32,6 +32,7 @@ Tests for the print_square function
 >>> print_square(1)
 #
 
+
 >>> # ------------------------
 # argument validation
 >>> # ------------------------
@@ -40,7 +41,6 @@ Tests for the print_square function
 Traceback (most recent call last):
 ...
 TypeError: print_square() missing 1 required positional argument: 'size'
-
 
 
 >>> # ------------------------

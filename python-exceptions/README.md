@@ -39,6 +39,18 @@ Finally, I learned the importance of cleaning up after an exception (because lea
 
 ---
 
+## Project Progress
+
+<p align="center">
+  <img src="assets/progress_barre_100.gif" alt="Mandatory tasks progress" width="80%">
+</p>
+
+<p align="center">
+  <sub>Mandatory tasks completion: 100% ---  Advanced tasks completion: 100%</sub>
+</p>
+
+---
+
 ## Tasks
 
 ### 0. Safe list printing

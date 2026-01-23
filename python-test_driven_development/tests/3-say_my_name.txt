@@ -27,6 +27,17 @@ My name is
 My name is Bob 
 
 
+>>> # ------------------------
+# argument validation
+>>> # ------------------------
+
+
+>>> say_my_name()
+Traceback (most recent call last):
+...
+TypeError: say_my_name() missing 2 required positional arguments: 'first_name' and 'last_name'
+
+
 >>> # ---------------------------------
 # element type validation - first name
 >>> # ---------------------------------

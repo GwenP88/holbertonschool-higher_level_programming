@@ -31,6 +31,18 @@ Finally, I learned how to use command line arguments with Python programs, which
 
 ---
 
+## Project Progress
+
+<p align="center">
+  <img src="assets/progress_barre_100.gif" alt="Mandatory tasks progress" width="80%">
+</p>
+
+<p align="center">
+  <sub>Mandatory tasks completion: 100% ---  Advanced tasks completion: 100%</sub>
+</p>
+
+---
+
 ## Tasks
 
 ### 0. Import a simple function from a simple file

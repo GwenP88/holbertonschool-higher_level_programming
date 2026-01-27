@@ -1,12 +1,12 @@
 #!/usr/bin/python3
 """
-This module defines an empty Square class.
+Square module.
 """
 
 
 class Square:
     """
-    Write a class Square that defines a square.
+    Represents a square with validated size/position and printing support.
     """
 
     def __init__(self, size=0, position=(0, 0)):

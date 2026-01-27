@@ -33,6 +33,24 @@ Finally, I learned what the official Python coding style is, why it matters, and
 
 ---
 
+## Usage / Execution
+All Python scripts can be executed in two ways:
+
+### 1. Direct execution
+Make the file executable and run it directly:
+```bash
+chmod +x filename.py
+./filename.py
+```
+
+### 2. Using Python interpreter
+Run the script with Python:
+```bash
+python3 filename.py
+```
+
+---
+
 ## Project Progress
 
 <p align="center">

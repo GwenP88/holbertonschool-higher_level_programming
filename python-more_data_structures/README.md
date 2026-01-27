@@ -38,6 +38,24 @@ By the end of this project, you should be able to explain:
 
 ---
 
+## Usage / Execution
+All Python scripts can be executed in two ways:
+
+### 1. Direct execution
+Make the file executable and run it directly:
+```bash
+chmod +x filename.py
+./filename.py
+```
+
+### 2. Using Python interpreter
+Run the script with Python:
+```bash
+python3 filename.py
+```
+
+---
+
 ## Project Progress
 
 <p align="center">
@@ -206,4 +224,5 @@ Write a function that deletes keys with a specific value in a dictionary.
 Student at Holberton School  
 Track: Higher Level Programming  
 Project: Python - Data & Structures (part 2)
+
 

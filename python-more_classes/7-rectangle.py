@@ -10,8 +10,8 @@ class Rectangle:
 
     The rectangle is defined by width and height (integers >= 0),
     provides area and perimeter methods, string representations,
-    prints a message when deleted, and tracks the number of
-    active instances with number_of_instances.
+    prints a message when deleted, tracks active instances with
+    number_of_instances, and uses print_symbol for display.
     """
 
     number_of_instances = 0

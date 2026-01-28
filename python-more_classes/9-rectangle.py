@@ -10,8 +10,9 @@ class Rectangle:
 
     The rectangle is defined by width and height (integers >= 0),
     provides area and perimeter methods, string representations,
-    prints a message when deleted, tracks active instances with
-    number_of_instances, and uses print_symbol for display.
+    supports customizable display with print_symbol, tracks active
+    instances, includes bigger_or_equal for area comparison, and
+    provides a square class method to create square rectangles.
     """
 
     number_of_instances = 0
@@ -77,3 +78,7 @@ class Rectangle:
         if rect_1.area() >= rect_2.area():
             return rect_1
         return rect_2
+
+    @classmethod
+    def square(cls, size=0):
+        return cls(size, size)

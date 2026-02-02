@@ -88,9 +88,9 @@ class Square(Rectangle):
 
     def area(self):
         """
-        area - Returns the area of the rectangle
+        area - Returns the area of the square
 
-        Return: Rectangle area
+        Return: Square area
         """
         return self.__size * self.__size
 

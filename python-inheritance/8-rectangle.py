@@ -1,0 +1,53 @@
+#!/usr/bin/python3
+"""
+This module defines BaseGeometry.
+"""
+
+
+class BaseGeometry:
+    """
+    BaseGeometry - Base geometry class
+    """
+
+    def area(self):
+        """
+        area - Raises an exception
+
+        Return: None
+        """
+        raise Exception("area() is not implemented")
+
+    def integer_validator(self, name, value):
+        """
+        integer_validator - Validates an integer value
+
+        @name: Name of the parameter
+        @value: Value to validate
+
+        Return: None
+        """
+        if type(value) is not int:
+            raise TypeError("{} must be an integer".format(name))
+        if value <= 0:
+            raise ValueError("{} must be greater than 0".format(name))
+
+
+class Rectangle(BaseGeometry):
+    """
+    Rectangle - Rectangle class that inherits from BaseGeometry
+    """
+
+    def __init__(self, width, height):
+        """
+        __init__ - Initializes a Rectangle
+
+        @width: Rectangle width
+        @height: Rectangle height
+
+        Return: None
+        """
+
+        self.integer_validator("width", width)
+        self.__width = width
+        self.integer_validator("height", height)
+        self.__height = height

@@ -10,17 +10,12 @@ From simple type checks to building geometric shapes, this project proves that g
 ---
 
 ## Learning Objectives
-With this project, I learned how to:
-- Understand what a **parent class (superclass)** and a **child class (subclass)** are, and why they matter.
-- List all attributes and methods of a class or instance and actually understand what I’m looking at.
-- Know when and how instances can dynamically receive new attributes (and when Python says “nope”).
-- Create classes that inherit from other classes, including multiple inheritance.
-- Identify the default base class that every Python class inherits from.
-- Override inherited methods and attributes safely and intentionally.
-- Understand which attributes and methods are automatically available through inheritance.
-- Explain the real purpose of inheritance (hint: it’s not just to write less code).
-- Correctly use `isinstance`, `issubclass`, `type`, and `super` without guessing.
-- Build clean class hierarchies that make sense to humans, not just to the interpreter.
+With this project, I learned what parent and child classes really are and why their relationship matters. 
+I learned how to explore the attributes and methods of a class or instance and actually understand what I’m seeing. 
+I discovered when Python allows instances to receive new attributes, and when it very clearly refuses. 
+I practiced creating classes that inherit from others, including multiple inheritance, while keeping things readable. 
+I identified the default base class behind every Python class and learned how to override inherited methods safely and intentionally. 
+I now understand what inheritance is truly for, beyond just reducing code duplication, and I can use isinstance, issubclass, type, and super with confidence.
 
 ---
 

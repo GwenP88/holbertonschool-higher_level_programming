@@ -10,14 +10,12 @@ In short: less spaghetti code, more elegant dragons that can fly and swim 🐉.
 ---
 
 ## Learning Objectives
-With this project, I learned how to:
-- Define and use **abstract classes** to enforce method implementation.
-- Design clear **interfaces** and rely on **duck typing** instead of rigid type checks.
-- Extend **standard base classes** (like `list` and iterators) to customize behavior.
-- Override methods safely to enhance or modify inherited behavior.
-- Apply **multiple inheritance** and understand Python’s method resolution order (MRO).
-- Use **mixins** to compose reusable behaviors without deep inheritance trees.
-- Write cleaner, more flexible, and more maintainable object-oriented Python code.
+With this project, I learned how to define and use abstract classes to politely but firmly tell subclasses “you shall implement this method.” I also learned how to design clear interfaces and trust duck typing instead of obsessively checking types — if it quacks like a duck, it’s welcome in the function. 
+Along the way, I extended standard base classes such as lists and iterators to give them a bit more personality, while still respecting their original behavior. 
+I practiced overriding methods safely to enhance or tweak inherited functionality without breaking everything in the process. 
+I explored multiple inheritance and finally understood how Python decides who speaks first thanks to the method resolution order (MRO). 
+I used mixins to compose reusable behaviors without building terrifying inheritance pyramids. 
+Overall, this project helped me write object-oriented Python code that is cleaner, more flexible, easier to maintain, and far less likely to summon ancient debugging demons.
 
 ---
 

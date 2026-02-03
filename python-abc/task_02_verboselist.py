@@ -7,21 +7,21 @@ class VerboseList(list):
     """VerboseList extends list and
     prints notifications on append/extend/remove/pop."""
 
-    def append(self, iterable):
+    def append(self, item):
         """Append one item to the list and print a notification."""
-        super().append(iterable)
-        print("Added [{}] to the list.".format(iterable))
+        super().append(item)
+        print("Added [{}] to the list.".format(item))
 
-    def extend(self, iterable):
+    def extend(self, item):
         """Extend the list and print how many items were added."""
-        nb_of_items = len(iterable)
-        super().extend(iterable)
+        nb_of_items = len(item)
+        super().extend(item)
         print("Extended the list with [{}] items.".format(nb_of_items))
 
-    def remove(self, iterable):
+    def remove(self, item):
         """Remove the first matching item and print a notification."""
-        print("Removed [{}] from the list.".format(iterable))
-        super().remove(iterable)
+        print("Removed [{}] from the list.".format(item))
+        super().remove(item)
 
     def pop(self, index=None):
         """Pop and return an item (default last) and print a notification."""

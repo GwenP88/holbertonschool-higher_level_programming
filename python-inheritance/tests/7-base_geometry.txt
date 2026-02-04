@@ -40,6 +40,12 @@ TypeError: value is not an integer
 [TypeError] flag must be an integer
 
 >>> try:
+...     bg.integer_validator("flag", False)
+... except Exception as e:
+...     print("[{}] {}".format(e.__class__.__name__, e))
+[TypeError] flag must be an integer
+
+>>> try:
 ...     bg.integer_validator("test", None)
 ... except Exception as e:
 ...     print("[{}] {}".format(e.__class__.__name__, e))

@@ -1,9 +1,9 @@
 #!/usr/bin/env python3
-from abc import ABC, abstractmethod
-import math
 """Define abstract shapes and print
 their area and perimeter using duck typing.
 """
+from abc import ABC, abstractmethod
+import math
 
 
 class Shape(ABC):

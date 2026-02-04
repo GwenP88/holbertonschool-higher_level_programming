@@ -5,8 +5,10 @@ Tests for BaseGeometry
 Import the class:
 >>> BaseGeometry = __import__('7-base_geometry').BaseGeometry
 
-Create an instance:
+Test BaseGeometry class instantiation:
 >>> bg = BaseGeometry()
+>>> type(bg)
+<class '7-base_geometry.BaseGeometry'>
 
 -------------------------
 Valid calls (no output)
@@ -21,79 +23,84 @@ Valid calls (no output)
 TypeError: value is not an integer
 -----------------------------------
 
->>> try:
-...     bg.integer_validator("name", "John")
-... except Exception as e:
-...     print("[{}] {}".format(e.__class__.__name__, e))
-[TypeError] name must be an integer
+>>> bg.integer_validator("name", "John")
+Traceback (most recent call last):
+...
+TypeError: name must be an integer
 
->>> try:
-...     bg.integer_validator("length", 3.5)
-... except Exception as e:
-...     print("[{}] {}".format(e.__class__.__name__, e))
-[TypeError] length must be an integer
+>>> bg.integer_validator("length", 3.5)
+Traceback (most recent call last):
+...
+TypeError: length must be an integer
 
->>> try:
-...     bg.integer_validator("flag", True)
-... except Exception as e:
-...     print("[{}] {}".format(e.__class__.__name__, e))
-[TypeError] flag must be an integer
+>>> bg.integer_validator("flag", True)
+Traceback (most recent call last):
+...
+TypeError: flag must be an integer
 
->>> try:
-...     bg.integer_validator("flag", False)
-... except Exception as e:
-...     print("[{}] {}".format(e.__class__.__name__, e))
-[TypeError] flag must be an integer
+>>> bg.integer_validator("flag", False)
+Traceback (most recent call last):
+...
+TypeError: flag must be an integer
 
->>> try:
-...     bg.integer_validator("test", None)
-... except Exception as e:
-...     print("[{}] {}".format(e.__class__.__name__, e))
-[TypeError] test must be an integer
+>>> bg.integer_validator("test", None)
+Traceback (most recent call last):
+...
+TypeError: test must be an integer
 
->>> try:
-...     bg.integer_validator("test", [1, 2, 3])
-... except Exception as e:
-...     print("[{}] {}".format(e.__class__.__name__, e))
-[TypeError] test must be an integer
+>>> bg.integer_validator("test", [1, 2, 3])
+Traceback (most recent call last):
+...
+TypeError: test must be an integer
 
->>> try:
-...     bg.integer_validator("test", (1, 2, 3))
-... except Exception as e:
-...     print("[{}] {}".format(e.__class__.__name__, e))
-[TypeError] test must be an integer
+>>> bg.integer_validator("test", (1, 2, 3))
+Traceback (most recent call last):
+...
+TypeError: test must be an integer
 
->>> try:
-...     bg.integer_validator("test", {"key": "value"})
-... except Exception as e:
-...     print("[{}] {}".format(e.__class__.__name__, e))
-[TypeError] test must be an integer
+>>> bg.integer_validator("test", {"key": "value"})
+Traceback (most recent call last):
+...
+TypeError: test must be an integer
+
+>>> bg.integer_validator("test", {1, 2, 3})
+Traceback (most recent call last):
+...
+TypeError: test must be an integer
 
 -----------------------------------------
 ValueError: value must be greater than 0
 -----------------------------------------
 
->>> try:
-...     bg.integer_validator("age", 0)
-... except Exception as e:
-...     print("[{}] {}".format(e.__class__.__name__, e))
-[ValueError] age must be greater than 0
+>>> bg.integer_validator("age", 0)
+Traceback (most recent call last):
+...
+ValueError: age must be greater than 0
 
->>> try:
-...     bg.integer_validator("distance", -4)
-... except Exception as e:
-...     print("[{}] {}".format(e.__class__.__name__, e))
-[ValueError] distance must be greater than 0
+>>> bg.integer_validator("distance", -4)
+Traceback (most recent call last):
+...
+ValueError: distance must be greater than 0
 
------------------------------
+-------------------------
+Large integers
+-------------------------
+
+>>> bg.integer_validator("big_number", 100000000000000)
+
+>>> bg.integer_validator("big_negative", -100000000000000)
+Traceback (most recent call last):
+...
+ValueError: big_negative must be greater than 0
+
+-------------------------
 area() is not implemented
------------------------------
+-------------------------
 
->>> try:
-...     bg.area()
-... except Exception as e:
-...     print("[{}] {}".format(e.__class__.__name__, e))
-[Exception] area() is not implemented
+>>> bg.area()
+Traceback (most recent call last):
+...
+Exception: area() is not implemented
 
 ------------------------------------
 Wrong number of arguments (doctest)
@@ -101,10 +108,12 @@ Wrong number of arguments (doctest)
 
 >>> bg.integer_validator()
 Traceback (most recent call last):
+...
 TypeError: integer_validator() missing 2 required positional arguments: 'name' and 'value'
 
 >>> bg.integer_validator("name")
 Traceback (most recent call last):
+...
 TypeError: integer_validator() missing 1 required positional argument: 'value'
 
 -------------------------

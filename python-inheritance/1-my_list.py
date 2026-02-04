@@ -13,5 +13,6 @@ class MyList(list):
         """
         print_sorted - Prints the list elements in ascending sorted order
         """
-
-        print(sorted(self))
+        cpy_self = self.copy()
+        cpy_self.sort()
+        print(cpy_self)

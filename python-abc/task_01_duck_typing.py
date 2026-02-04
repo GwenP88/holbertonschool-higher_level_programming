@@ -26,11 +26,11 @@ class Circle(Shape):
 
     def area(self):
         """Return the circle area."""
-        return math.pi * (self.radius ** 2)
+        return math.pi * abs(self.radius ** 2)
 
     def perimeter(self):
         """Return the circle perimeter."""
-        return math.pi * 2 * self.radius
+        return math.pi * 2 * abs(self.radius)
 
 
 class Rectangle(Shape):

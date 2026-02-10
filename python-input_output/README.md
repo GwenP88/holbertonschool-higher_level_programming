@@ -72,7 +72,6 @@ python3 filename.py
 
 **Files**
 - `0-read_file.py`
-- `my_file_0.txt`
 
 ---
 
@@ -84,7 +83,6 @@ python3 filename.py
 
 **Files**
 - `1-write_file.py`
-- `my_file_0.txt`
 
 ---
 
@@ -96,7 +94,6 @@ python3 filename.py
 
 **Files**
 - `2-append_write.py`
-- `file_append.txt`
 
 ---
 
@@ -163,7 +160,6 @@ python3 filename.py
 
 **Files**
 - `8-class_to_json.py`
-- `8-my_class.py`
 
 ---
 

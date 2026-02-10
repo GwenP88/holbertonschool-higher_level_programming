@@ -205,7 +205,6 @@ python3 filename.py
 **Files**
 - `12-pascal_triangle.py`
 
-
 ---
 
 ## Authors

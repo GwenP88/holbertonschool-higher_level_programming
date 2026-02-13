@@ -82,45 +82,128 @@ Along the way, I understood what a sequence is in Python, how tuple packing and 
 
 ## Tasks Overview
 
-### 0. Print a list of integers
-Prints each integer from a list on a new line using `str.format()`.
+## Task "0" - "Import a simple function from a simple file"
+- **Task status:** mandatory
+- **Task objectives:** Import `add` from `add_0.py` and print `1 + 2 = 3`.
+- **Task constraint:**
+  - Define `a = 1` and `b = 2` on separate lines.
+  - Use formatted `print`.
+  - Use `add_0` only once.
+  - No `*`, no `__import__`.
+  - Must not execute when imported.
+- **Expected behavior:** Output exactly `1 + 2 = 3`.
+- **Files:** `python-import_modules/0-add.py`
 
-### 1. Secure access to an element in a list
-Safely retrieves an element from a list by index without using `try/except`.
 
-### 2. Replace element
-Replaces an element at a given index in a list.
+## Task "1" - "My first toolbox!"
+- **Task status:** mandatory
+- **Task objectives:** Import math functions and print operations.
+- **Task constraint:**
+  - Define `a = 10`, `b = 5` (separate lines).
+  - Use only `a` and `b`.
+  - Max 4 `print`.
+  - Use `calculator_1` once.
+  - No `*`, no `__import__`.
+  - Must not execute when imported.
+- **Expected behavior:**
+  - `10 + 5 = 15`
+  - `10 - 5 = 5`
+  - `10 * 5 = 50`
+  - `10 / 5 = 2`
+- **Files:** `python-import_modules/1-calculation.py`
 
-### 3. Print a list of integers in reverse
-Prints all integers of a list in reverse order.
 
-### 4. Replace in a copy
-Returns a modified copy of a list without altering the original one.
+## Task "2" - "How to make a script dynamic!"
+- **Task status:** mandatory
+- **Task objectives:** Print number and list of CLI arguments.
+- **Task constraint:**
+  - Use `len(argv)`.
+  - Correct singular/plural.
+  - Number arguments starting at 1.
+  - Must not execute when imported.
+- **Expected behavior:** Matches given format.
+- **Files:** `python-import_modules/2-args.py`
 
-### 5. Can you C me now?
-Removes all occurrences of characters `c` and `C` from a string.
 
-### 6. Lists of lists = Matrix
-Prints a matrix of integers with proper formatting.
+## Task "3" - "Infinite addition"
+- **Task status:** mandatory
+- **Task objectives:** Add all CLI arguments.
+- **Task constraint:**
+  - Cast with `int()`.
+  - Print total.
+  - Must not execute when imported.
+- **Expected behavior:** Works with large numbers.
+- **Files:** `python-import_modules/3-infinite_add.py`
 
-### 7. Tuples addition
-Adds two tuples element-wise and returns a new tuple of two integers.
 
-### 8. More returns!
-Returns a tuple containing the length of a string and its first character.
+## Task "4" - "Who are you?"
+- **Task status:** mandatory
+- **Task objectives:** Print public names from `hidden_4.pyc`.
+- **Task constraint:**
+  - File in `/tmp/`.
+  - Alphabetical order.
+  - Exclude names starting with `__`.
+  - Must not execute when imported.
+- **Expected behavior:** One name per line.
+- **Files:** `/tmp/4-hidden_discovery.py`
 
-### 9. Find the max
-Finds and returns the largest integer in a list without using `max()`.
 
-### 10. Only by 2
-Returns a list of booleans indicating whether each element is divisible by 2.
+## Task "5" - "Everything can be imported"
+- **Task status:** mandatory
+- **Task objectives:** Import and print variable `a`.
+- **Task constraint:**
+  - No `*`, no `__import__`.
+  - Must not execute when imported.
+- **Expected behavior:** Prints `98`.
+- **Files:** `python-import_modules/5-variable_load.py`
 
-### 11. Delete at
-Deletes an element from a list at a given index without using `pop()`.
 
-### 12. Switch
-Swaps the values of two variables in exactly 5 lines of code.
+## Task "6" - "Build my own calculator!"
+- **Task status:** advanced
+- **Task objectives:** Handle basic operations from CLI.
+- **Task constraint:**
+  - Usage: `./100-my_calculator.py a operator b`
+  - Valid operators: `+ - * /`
+  - Invalid args → print usage, exit 1.
+  - Unknown operator → error message, exit 1.
+  - No `*`, no `__import__`.
+  - Must not execute when imported.
+- **Expected behavior:** `<a> <operator> <b> = <result>`
+- **Files:** `python-import_modules/100-my_calculator.py`
 
+
+## Task "7" - "Easy print"
+- **Task status:** advanced
+- **Task objectives:** Print `#pythoniscool`.
+- **Task constraint:**
+  - Max 2 lines.
+  - No `print`, `eval`, `open`, `import sys`.
+- **Expected behavior:** Prints `#pythoniscool`.
+- **Files:** `python-import_modules/101-easy_print.py`
+
+
+## Task "8" - "ByteCode -> Python #3"
+- **Task status:** advanced
+- **Task objectives:** Reproduce given bytecode logic.
+- **Task constraint:**
+  - Implement `magic_calculation(a, b)`.
+  - Follow exact bytecode behavior.
+- **Expected behavior:** Same logic as provided bytecode.
+- **Files:** `python-import_modules/102-magic_calculation.py`
+
+
+## Task "9" - "Fast alphabet"
+- **Task status:** advanced
+- **Task objectives:** Print uppercase alphabet.
+- **Task constraint:**
+  - Max 3 lines.
+  - No loops.
+  - No conditionals.
+  - No `str.join()`.
+  - No string literal.
+  - No system calls.
+- **Expected behavior:** `ABCDEFGHIJKLMNOPQRSTUVWXYZ`
+- **Files:** `python-import_modules/103-fast_alphabet.py`
 ---
 
 ## Author

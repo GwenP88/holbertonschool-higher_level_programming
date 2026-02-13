@@ -35,7 +35,7 @@ python3 filename.py
 </p>
 
 <p align="center">
-  <sub>Mandatory tasks completion: 100% ---  Advanced tasks completion: 100%</sub>
+  <sub>Mandatory tasks completion: 100%</sub>
 </p>
 
 ---
@@ -82,128 +82,145 @@ Along the way, I understood what a sequence is in Python, how tuple packing and 
 
 ## Tasks Overview
 
-## Task "0" - "Import a simple function from a simple file"
+## Task "0" - "Print a list of integers"
 - **Task status:** mandatory
-- **Task objectives:** Import `add` from `add_0.py` and print `1 + 2 = 3`.
+- **Task objectives:** Print all integers of a list, one per line.
 - **Task constraint:**
-  - Define `a = 1` and `b = 2` on separate lines.
-  - Use formatted `print`.
-  - Use `add_0` only once.
-  - No `*`, no `__import__`.
-  - Must not execute when imported.
-- **Expected behavior:** Output exactly `1 + 2 = 3`.
-- **Files:** `python-import_modules/0-add.py`
+  - Use `str.format()`.
+  - No import.
+  - No casting to string.
+- **Expected behavior:** One integer per line.
+- **Files:** `python-data_structures/0-print_list_integer.py`
 
 
-## Task "1" - "My first toolbox!"
+## Task "1" - "Secure access to an element in a list"
 - **Task status:** mandatory
-- **Task objectives:** Import math functions and print operations.
+- **Task objectives:** Return element at given index.
 - **Task constraint:**
-  - Define `a = 10`, `b = 5` (separate lines).
-  - Use only `a` and `b`.
-  - Max 4 `print`.
-  - Use `calculator_1` once.
-  - No `*`, no `__import__`.
-  - Must not execute when imported.
-- **Expected behavior:**
-  - `10 + 5 = 15`
-  - `10 - 5 = 5`
-  - `10 * 5 = 50`
-  - `10 / 5 = 2`
-- **Files:** `python-import_modules/1-calculation.py`
+  - If index < 0 or out of range → return `None`.
+  - No import.
+  - No `try/except`.
+- **Expected behavior:** Returns element or `None`.
+- **Files:** `python-data_structures/1-element_at.py`
 
 
-## Task "2" - "How to make a script dynamic!"
+## Task "2" - "Replace element"
 - **Task status:** mandatory
-- **Task objectives:** Print number and list of CLI arguments.
+- **Task objectives:** Replace element at specific index.
 - **Task constraint:**
-  - Use `len(argv)`.
-  - Correct singular/plural.
-  - Number arguments starting at 1.
-  - Must not execute when imported.
-- **Expected behavior:** Matches given format.
-- **Files:** `python-import_modules/2-args.py`
+  - If index invalid → return original list.
+  - No import.
+  - No `try/except`.
+- **Expected behavior:** Modified list (in place).
+- **Files:** `python-data_structures/2-replace_in_list.py`
 
 
-## Task "3" - "Infinite addition"
+## Task "3" - "Print a list of integers... in reverse!"
 - **Task status:** mandatory
-- **Task objectives:** Add all CLI arguments.
+- **Task objectives:** Print integers in reverse order.
 - **Task constraint:**
-  - Cast with `int()`.
-  - Print total.
-  - Must not execute when imported.
-- **Expected behavior:** Works with large numbers.
-- **Files:** `python-import_modules/3-infinite_add.py`
+  - Use `str.format()`.
+  - No import.
+  - No casting to string.
+- **Expected behavior:** One integer per line (reversed).
+- **Files:** `python-data_structures/3-print_reversed_list_integer.py`
 
 
-## Task "4" - "Who are you?"
+## Task "4" - "Replace in a copy"
 - **Task status:** mandatory
-- **Task objectives:** Print public names from `hidden_4.pyc`.
+- **Task objectives:** Replace element without modifying original list.
 - **Task constraint:**
-  - File in `/tmp/`.
-  - Alphabetical order.
-  - Exclude names starting with `__`.
-  - Must not execute when imported.
-- **Expected behavior:** One name per line.
-- **Files:** `/tmp/4-hidden_discovery.py`
+  - If index invalid → return copy of original list.
+  - No import.
+  - No `try/except`.
+- **Expected behavior:** New modified list, original unchanged.
+- **Files:** `python-data_structures/4-new_in_list.py`
 
 
-## Task "5" - "Everything can be imported"
+## Task "5" - "Can you C me now?"
 - **Task status:** mandatory
-- **Task objectives:** Import and print variable `a`.
+- **Task objectives:** Remove all `c` and `C` from a string.
 - **Task constraint:**
-  - No `*`, no `__import__`.
-  - Must not execute when imported.
-- **Expected behavior:** Prints `98`.
-- **Files:** `python-import_modules/5-variable_load.py`
+  - No import.
+  - No `str.replace()`.
+- **Expected behavior:** Return new string without `c` or `C`.
+- **Files:** `python-data_structures/5-no_c.py`
 
 
-## Task "6" - "Build my own calculator!"
-- **Task status:** advanced
-- **Task objectives:** Handle basic operations from CLI.
+## Task "6" - "Lists of lists = Matrix"
+- **Task status:** mandatory
+- **Task objectives:** Print a matrix of integers.
 - **Task constraint:**
-  - Usage: `./100-my_calculator.py a operator b`
-  - Valid operators: `+ - * /`
-  - Invalid args → print usage, exit 1.
-  - Unknown operator → error message, exit 1.
-  - No `*`, no `__import__`.
-  - Must not execute when imported.
-- **Expected behavior:** `<a> <operator> <b> = <result>`
-- **Files:** `python-import_modules/100-my_calculator.py`
+  - Use `str.format()`.
+  - No import.
+  - No casting to string.
+- **Expected behavior:** Matrix format (rows on separate lines).
+- **Files:** `python-data_structures/6-print_matrix_integer.py`
 
 
-## Task "7" - "Easy print"
-- **Task status:** advanced
-- **Task objectives:** Print `#pythoniscool`.
+## Task "7" - "Tuples addition"
+- **Task status:** mandatory
+- **Task objectives:** Add two tuples.
 - **Task constraint:**
-  - Max 2 lines.
-  - No `print`, `eval`, `open`, `import sys`.
-- **Expected behavior:** Prints `#pythoniscool`.
-- **Files:** `python-import_modules/101-easy_print.py`
+  - Return tuple of 2 integers.
+  - Missing values → use 0.
+  - Ignore extra values.
+  - No import.
+- **Expected behavior:** Tuple with summed elements.
+- **Files:** `python-data_structures/7-add_tuple.py`
 
 
-## Task "8" - "ByteCode -> Python #3"
-- **Task status:** advanced
-- **Task objectives:** Reproduce given bytecode logic.
+## Task "8" - "More returns!"
+- **Task status:** mandatory
+- **Task objectives:** Return tuple (length, first character).
 - **Task constraint:**
-  - Implement `magic_calculation(a, b)`.
-  - Follow exact bytecode behavior.
-- **Expected behavior:** Same logic as provided bytecode.
-- **Files:** `python-import_modules/102-magic_calculation.py`
+  - If string empty → first character is `None`.
+  - No import.
+- **Expected behavior:** `(length, first_character)`
+- **Files:** `python-data_structures/8-multiple_returns.py`
 
 
-## Task "9" - "Fast alphabet"
-- **Task status:** advanced
-- **Task objectives:** Print uppercase alphabet.
+## Task "9" - "Find the max"
+- **Task status:** mandatory
+- **Task objectives:** Find biggest integer in list.
 - **Task constraint:**
-  - Max 3 lines.
-  - No loops.
-  - No conditionals.
-  - No `str.join()`.
-  - No string literal.
-  - No system calls.
-- **Expected behavior:** `ABCDEFGHIJKLMNOPQRSTUVWXYZ`
-- **Files:** `python-import_modules/103-fast_alphabet.py`
+  - If list empty → return `None`.
+  - No import.
+  - No builtin `max()`.
+- **Expected behavior:** Return max integer.
+- **Files:** `python-data_structures/9-max_integer.py`
+
+
+## Task "10" - "Only by 2"
+- **Task status:** mandatory
+- **Task objectives:** Return list of booleans for multiples of 2.
+- **Task constraint:**
+  - Same size as original list.
+  - No import.
+- **Expected behavior:** True if divisible by 2, else False.
+- **Files:** `python-data_structures/10-divisible_by_2.py`
+
+
+## Task "11" - "Delete at"
+- **Task status:** mandatory
+- **Task objectives:** Delete element at specific index.
+- **Task constraint:**
+  - If index invalid → return original list.
+  - No `pop()`.
+  - No import.
+- **Expected behavior:** Modified list (in place).
+- **Files:** `python-data_structures/11-delete_at.py`
+
+
+## Task "12" - "Switch"
+- **Task status:** mandatory
+- **Task objectives:** Swap values of `a` and `b`.
+- **Task constraint:**
+  - Code inserted at specified line.
+  - Exactly 5 lines total.
+- **Expected behavior:** Values of `a` and `b` switched.
+- **Files:** `python-data_structures/12-switch.py`
+  
 ---
 
 ## Author

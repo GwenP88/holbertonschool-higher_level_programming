@@ -33,7 +33,7 @@ In the end, this project taught me that tests don’t slow development down—th
 </p>
 
 <p align="center">
-<sub>Mandatory tasks completion: 100%</sub>
+<sub>Mandatory tasks completion: 97.6%</sub>
 </p>
 
 ---
@@ -120,5 +120,6 @@ This project focuses on building strong habits:
 Student at Holberton School  
 Track: Higher Level Programming  
 Project: Python -Test-Driven development
+
 
 

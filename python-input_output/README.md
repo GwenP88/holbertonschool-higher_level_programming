@@ -57,7 +57,7 @@ python3 filename.py
 </p>
 
 <p align="center">
-<sub>Mandatory tasks completion: 100% ---  Advanced tasks completion: 0%</sub>
+<sub>Mandatory tasks completion: 100% ---  Advanced tasks completion: 100%</sub>
 </p>
 
 ---
@@ -204,6 +204,21 @@ python3 filename.py
 
 **Files**
 - `12-pascal_triangle.py`
+
+---
+
+## Task "13" - "Search and update"
+- **Task status:** advanced
+- **Task objectives:** Insert a line into a file after each line containing a specific string.
+- **Task constraint:**
+  - Prototype: `def append_after(filename="", search_string="", new_string=""):`
+  - Use the `with` statement.
+  - No import.
+  - No need to handle file permission or missing file exceptions.
+- **Expected behavior:**
+  - After every line containing `search_string`, insert `new_string`.
+  - If executed multiple times, the insertion happens again (not prevented).
+- **Files:** `python-input_output/100-append_after.py`
 
 ---
 

@@ -55,7 +55,7 @@ python3 filename.py
 </p>
 
 <p align="center">
-<sub>Mandatory tasks completion: 100% ---  Advanced tasks completion: %</sub>
+<sub>Mandatory tasks completion: 100%</sub>
 </p>
 
 ---

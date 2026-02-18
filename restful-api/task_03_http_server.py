@@ -26,7 +26,7 @@ class MyHandler(BaseHTTPRequestHandler):
             self.wfile.write(b"OK")
         elif self.path == "/data":
             self.send_response(200)
-            data = {"name": "John", "age": 30, "city": "New York\n"}
+            data = {"name": "John", "age": 30, "city": "New York"}
             json_dict = json.dumps(data)
             self.send_header("Content-Type", "application/json")
             self.end_headers()
@@ -34,7 +34,7 @@ class MyHandler(BaseHTTPRequestHandler):
         elif self.path == "/info":
             self.send_response(200)
             data = {"version": "1.0",
-                    "description": "A simple API built with http.server\n"}
+                    "description": "A simple API built with http.server"}
             json_dict = json.dumps(data)
             self.send_header("Content-Type", "application/json")
             self.end_headers()

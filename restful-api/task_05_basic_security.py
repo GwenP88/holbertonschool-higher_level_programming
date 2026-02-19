@@ -70,7 +70,7 @@ def handle_invalid_token_error(err):
 
 
 @jwt.expired_token_loader
-def handle_expired_token_error(err):
+def handle_expired_token_error(jwt_header, jwt_payload):
     """Return 401 for expired JWTs."""
     return jsonify({"error": "Token has expired"}), 401
 
@@ -93,7 +93,7 @@ def login():
     """Authenticate user credentials and issue a JWT access token."""
     data = request.get_json(silent=True)
     if data is None:
-        return jsonify({"error": "Invalid JSON"}), 401
+        return jsonify({"error": "Invalid credentials"}), 401
     else:
         username = data.get("username", None)
         password = data.get("password", None)
@@ -113,7 +113,7 @@ def login():
 @jwt_required()
 def protected():
     """JWT-protected endpoint."""
-    return jsonify({"message": "JWT Auth: Access Granted"})
+    return "JWT Auth: Access Granted"
 
 
 # ----- Role-based access control routes -----
@@ -125,7 +125,7 @@ def admin_only():
     user_role = users[identity]["role"]
     if user_role != "admin":
         return jsonify({"error": "Admin access required"}), 403
-    return jsonify({"message": "Admin Access: Granted"})
+    return "Admin Access: Granted"
 
 
 if __name__ == "__main__":

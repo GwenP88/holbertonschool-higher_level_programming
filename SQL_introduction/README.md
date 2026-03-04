@@ -1,4 +1,4 @@
-![SQL - Introduction Banner](assets/banner.png)
+![SQL - Introduction Banner](assets/banner.jpg)
 
 # SQL - Introduction
 

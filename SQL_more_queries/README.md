@@ -99,7 +99,7 @@ curl "https://s3.eu-west-3.amazonaws.com/hbtn.intranet.project.files/holbertonsc
 </p>
 
 <p align="center">
-<sub>Mandatory tasks completion: 100% ---  Advanced tasks completion: 25%</sub>
+<sub>Mandatory tasks completion: 100% ---  Advanced tasks completion: 0%</sub>
 </p>
 
 ---

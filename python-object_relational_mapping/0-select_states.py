@@ -9,7 +9,13 @@ if __name__ == "__main__":
     database = sys.argv[3]
 
     # connection à MySQL - garder la connection dans une variable
-    conn = MySQLdb.connect(host="localhost", port=3306, user=user, passwd=password, db=database, charset="utf8")
+    conn = MySQLdb.connect(
+        host="localhost",
+        port=3306, user=user,
+        passwd=password,
+        db=database,
+        charset="utf8"
+        )
 
     # creation du curseur à partir de la connection
     # cursor = outil pour envoyer des requêtes
@@ -28,5 +34,6 @@ if __name__ == "__main__":
 
     # fermer le cursor
     cur.close()
+
     # fermer la connection
     conn.close()

@@ -1,4 +1,5 @@
 #!/usr/bin/python3
+"""Connects to a MySQL database and lists all states ordered by id."""
 import sys
 import MySQLdb
 

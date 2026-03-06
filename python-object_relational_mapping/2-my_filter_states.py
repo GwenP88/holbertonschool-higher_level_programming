@@ -1,6 +1,8 @@
 #!/usr/bin/python3
 """Connects to a MySQL database
-and lists all states starting with N, ordered by id."""
+and takes in an argument
+and displays all values in the states table
+of hbtn_0e_0_usa where name matches the argument"""
 import sys
 import MySQLdb
 
@@ -22,7 +24,7 @@ if __name__ == "__main__":
     cur = conn.cursor()
     cur.execute(
         "SELECT * FROM states "
-        "WHERE name = '{}' "
+        "WHERE BINARY name = '{}' "
         "ORDER BY id ASC".format(searched)
         )
     query_rows = cur.fetchall()

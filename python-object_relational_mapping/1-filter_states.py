@@ -20,7 +20,9 @@ if __name__ == "__main__":
 
     cur = conn.cursor()
     cur.execute(
-        "SELECT * FROM states WHERE LEFT(name, 1) = 'N' ORDER BY id ASC"
+        "SELECT * FROM states " \
+        "WHERE BINARY LEFT(name, 1) = 'N' " \
+        "ORDER BY id ASC"
         )
     query_rows = cur.fetchall()
     for row in query_rows:

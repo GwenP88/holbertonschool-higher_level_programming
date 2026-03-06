@@ -1,5 +1,5 @@
 #!/usr/bin/python3
-"""Connects to a MySQL database 
+"""Connects to a MySQL database
 and lists all cities with their state names."""
 import sys
 import MySQLdb

@@ -1,6 +1,6 @@
 #!/usr/bin/python3
-"""Connects to a MySQL database and
-lists of states starting with N ordered by id"""
+"""Connects to a MySQL database
+and lists all states starting with N, ordered by id."""
 import sys
 import MySQLdb
 
@@ -19,7 +19,7 @@ if __name__ == "__main__":
         )
 
     cur = conn.cursor()
-    cur.execute("SELECT * FROM states WHERE name LIKE 'N%' ORDER BY id ASC")
+    cur.execute("SELECT * FROM states WHERE LEFT(name, 1) = 'N' ORDER BY id ASC")
     query_rows = cur.fetchall()
     for row in query_rows:
         print(row)

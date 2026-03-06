@@ -1,3 +1,4 @@
+#!/usr/bin/python3
 """
 Script that adds the State object "Louisiana"
 to the database and prints the new state's id using SQLAlchemy.

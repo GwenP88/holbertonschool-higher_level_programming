@@ -1,5 +1,6 @@
 #!/usr/bin/python3
-"""Connects to a MySQL database and lists all states ordered by id with name starting with N."""
+"""Connects to a MySQL database and
+lists of states starting with N ordered by id"""
 import sys
 import MySQLdb
 

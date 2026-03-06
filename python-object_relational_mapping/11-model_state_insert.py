@@ -1,6 +1,6 @@
-#!/usr/bin/python3
 """
-script that prints the State object with the name passed as argument.
+Script that adds the State object "Louisiana"
+to the database and prints the new state's id using SQLAlchemy.
 """
 import sys
 from model_state import Base, State
@@ -20,4 +20,5 @@ if __name__ == "__main__":
     louisiana = State(name='Louisiana')
     session.add(louisiana)
     session.commit()
+    print(louisiana.id)
     session.close()

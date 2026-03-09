@@ -1,4 +1,4 @@
-![Python - Object-relational mapping Banner](assets/banner.png)
+![Python - Object-relational mapping Banner](assets/banner.jpg)
 
 # Python - Object-relational mapping
 

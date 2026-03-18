@@ -1,3 +1,4 @@
+![JavaScript - Warm up Banner](assets/banner.jpg)
 # JavaScript - Warm up
 
 ## Description

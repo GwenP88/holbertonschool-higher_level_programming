@@ -6,4 +6,3 @@ document.addEventListener('DOMContentLoaded', function () {
       hello.textContent = data.hello;
     });
 });
- 

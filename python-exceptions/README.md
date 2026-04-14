@@ -1,30 +1,29 @@
-![Python Exceptions Banner](assets/banner.png)
-
 # Python - Exceptions
 
-## Description
-This project is an introduction to **exception handling in Python**.  
-It focuses on understanding the difference between errors and exceptions, learning how to handle runtime errors properly using `try`, `except`, `else`, and `finally`, and knowing when and how to raise exceptions intentionally.
-
-Exception handling is a key concept in Python that allows programs to **fail gracefully**, avoid crashes, and manage unexpected situations such as invalid user input, division by zero, or accessing elements out of range.
+> Because things go wrong — and a good developer is ready for it.
 
 ---
 
-## Learning Objectives
+## 📝 Description
 
-During this project, I learned why Python is so enjoyable to work with: its syntax is clear, readable, and it knows how to handle problems without panicking. 
-I understood the difference between errors and exceptions, and why exceptions exist to prevent a program from crashing at the first unexpected issue.
-
-I learned how to use exceptions properly, when to catch them, when to raise them, and how to handle them cleanly using `try` and `except`. 
-I also understood why catching exceptions is important: to keep the program under control, display useful error messages, and avoid dramatic exits.
-
-Finally, I learned the importance of cleaning up after an exception (because leaving a mess is never a good idea), such as closing files or freeing resources, to keep the program stable and well-behaved.
+This project is all about handling the unexpected. I learn the difference between errors and exceptions in Python, and how to use `try`, `except`, `finally`, and `raise` to write code that doesn't crash and burn at the first sign of trouble. From safely printing integers to executing functions without blowing up the program, this project teaches me to anticipate failure and handle it gracefully — a skill that turns out to be very much mandatory in real-world development.
 
 ---
 
-## Requirements
+## 🎯 Learning Objectives
 
-- Allowed editors: `vi`, `vim`, `emacs`
+By the end of this project, I am able to explain the difference between errors and exceptions, and I know what exceptions are and how to use them properly. I understand when to use exception handling, how to correctly catch exceptions, and what the purpose of the `finally` block is. I can raise built-in exceptions intentionally with custom messages, and I know when to implement clean-up actions after an exception occurs.
+
+---
+
+## 🛠️ Technologies Used
+
+This project is written entirely in Python 3 (version 3.8.5), running on Ubuntu 20.04 LTS. It relies exclusively on Python's built-in exception handling mechanisms — `try`, `except`, `finally`, and `raise`. Code style is enforced with pycodestyle 2.7.*. Some advanced tasks write error messages to `stderr` using the `sys` module.
+
+---
+
+## ⚙️ Requirements
+
 - OS: Ubuntu 20.04 LTS
 - Python version: `python3` (3.8.5)
 - All files must end with a new line
@@ -32,14 +31,21 @@ Finally, I learned the importance of cleaning up after an exception (because lea
 - A README.md file at the root of the project is mandatory
 - Code must follow pycodestyle (version 2.7.*)
 - All files must be executable
-- File length will be tested using wc
 - No module imports allowed unless explicitly stated
-- Use of try / except is mandatory where required
-- Use of len() and type() is forbidden where specified
 
 ---
 
-## Usage / Execution
+## 🚀 Installation
+
+```bash
+git clone https://github.com/GwenP88/holbertonschool-higher_level_programming.git
+cd holbertonschool-higher_level_programming/python-exceptions
+```
+
+---
+
+## ▶️ Usage / Execution
+
 All Python scripts can be executed in two ways:
 
 ### 1. Direct execution
@@ -57,163 +63,138 @@ python3 filename.py
 
 ---
 
-## Project Progress
+## 📊 Project Progress
 
 <p align="center">
-  <img src="assets/progress_barre_100.gif" alt="Mandatory tasks progress" width="80%">
+<img src="assets/progress_barre_100.gif" alt="Mandatory tasks progress" width="80%">
 </p>
 
 <p align="center">
-  <sub>Mandatory tasks completion: 100% ---  Advanced tasks completion: 100%</sub>
+<sub>Mandatory tasks completion: 100% --- Advanced tasks completion: 100%</sub>
 </p>
 
 ---
 
-## Tasks
+## ✨ Features
 
-### 0. Safe list printing
-**File:** `0-safe_print_list.py`
+### Task 0 - Safe list printing
 
-- Prints `x` elements of a list  
-- Uses `try / except`  
-- Does not use `len()`  
-- Returns the real number of elements printed  
-- Handles cases where `x` is greater than the list size  
+- Mandatory
+- Print `x` elements of a list safely using `try/except`; no `len()`, no imports
+- `x` can exceed the list length without crashing the program
+- Returns the actual number of elements printed
 
----
-
-### 1. Safe printing of an integers list
-**File:** `1-safe_print_integer.py`
-
-- Prints an integer using `"{:d}".format()`  
-- Returns `True` if the value is an integer, otherwise `False`  
-- Uses `try / except`  
-- Does not use `type()`  
+**Files:** `0-safe_print_list.py`
 
 ---
 
-### 2. Print and count integers
-**File:** `2-safe_print_list_integers.py`
+### Task 1 - Safe printing of an integers list
 
-- Prints the first `x` elements of a list  
-- Only integers are printed; other types are silently ignored  
-- Uses `try / except`  
-- Does not use `len()`  
-- Returns the number of integers printed  
-- Raises an exception if the list is too short  
+- Mandatory
+- Print a value as an integer using `"{:d}".format()` inside a `try/except` block; no `type()`, no imports
+- Returns `True` if the value was successfully printed as an integer, `False` otherwise
+
+**Files:** `1-safe_print_integer.py`
 
 ---
 
-### 3. Integers division with debug
-**File:** `3-safe_print_division.py`
+### Task 2 - Print and count integers
 
-- Divides two integers  
-- Uses `try / except / finally`  
-- Prints the result in the `finally` block  
-- Returns the division result or `None` if an error occurs  
+- Mandatory
+- Print the first `x` elements of a list, skipping non-integers silently; uses `try/except`, `"{:d}".format()`, no `len()`, no imports
+- If `x` exceeds the list length, an `IndexError` is expected and raised
+- Returns the count of integers actually printed
 
----
-
-### 4. Divide a list
-**File:** `4-list_division.py`
-
-- Divides elements of two lists index by index  
-- Returns a new list of size `list_length`  
-- Handles the following cases:
-  - Wrong type → prints `wrong type`
-  - Division by zero → prints `division by 0`
-  - Index out of range → prints `out of range`
-- Uses `try / except / finally`  
-- If a division fails, the result is `0`  
+**Files:** `2-safe_print_list_integers.py`
 
 ---
 
-### 5. Raise exception
-**File:** `5-raise_exception.py`
+### Task 3 - Integers division with debug
 
-- Raises a `TypeError`  
-- No module imports allowed  
+- Mandatory
+- Divide two integers and always print the result in the `finally` block, preceded by `Inside result:`
+- Uses `try/except/finally`; no imports
+- Returns the division result, or `None` if a `ZeroDivisionError` occurs
 
----
-
-### 6. Raise a message
-**File:** `6-raise_exception_msg.py`
-
-- Raises a `NameError` with a custom message  
-- No module imports allowed  
+**Files:** `3-safe_print_division.py`
 
 ---
 
-## Advanced Tasks – Python Exceptions
+### Task 4 - Divide a list
 
-### 7. Safe integer print with error message
+- Mandatory
+- Divide two lists element by element and return a new list of results
+- Uses `try/except/finally`; handles wrong types (`wrong type`), division by zero (`division by 0`), and out-of-range access (`out of range`) gracefully; no imports
+- Returns a new list of length `list_length` with division results or `0` for failed divisions
 
-**File:** `100-safe_print_integer_err.py`  
-**Prototype:** `def safe_print_integer_err(value):`
-
-This function safely prints an integer value.
-
-- The value is printed followed by a new line **only if it is an integer**
-- Uses `try / except` to handle errors
-- Uses `"{:d}".format()` to format the integer
-- Does **not** use `type()`
-- If the value is **not** an integer:
-  - Returns `False`
-  - Prints the error message to **stderr**, preceded by `Exception:`
-- Returns `True` if the integer is printed correctly
-
-This task focuses on exception handling, output formatting, and stderr usage.
+**Files:** `4-list_division.py`
 
 ---
 
-### 8. Safe function
+### Task 5 - Raise exception
 
-**File:** `101-safe_function.py`  
-**Prototype:** `def safe_function(fct, *args):`
+- Mandatory
+- Raise a `TypeError` exception intentionally
+- No imports
+- Always raises a `TypeError` when called
 
-This function executes another function safely.
-
-- `fct` is always a valid function reference
-- Executes the function with its arguments
-- Returns the function result if execution succeeds
-- If an exception occurs:
-  - Prints the error message to **stderr**, preceded by `Exception:`
-  - Returns `None`
-- Uses `try / except`
-
-This task reinforces safe execution patterns and generic exception handling.
+**Files:** `5-raise_exception.py`
 
 ---
 
-### 9. ByteCode → Python #4
+### Task 6 - Raise a message
 
-**File:** `102-magic_calculation.py`  
-**Prototype:** `def magic_calculation(a, b):`
+- Mandatory
+- Raise a `NameError` exception with a custom message
+- No imports
+- Raises a `NameError` with the provided message string
 
-This function reproduces **exactly** the behavior of a given Python bytecode.
-
-Key characteristics:
-- Initializes a result variable
-- Iterates over a range
-- Uses a `try / except` block inside a loop
-- Raises a custom exception when a condition is met
-- Performs arithmetic operations involving:
-  - Power
-  - Division
-  - In-place addition
-- Handles exceptions by updating the result and breaking the loop
-- Returns the final computed result
-
-This task emphasizes understanding Python bytecode and translating low-level operations into valid Python logic.
+**Files:** `6-raise_exception_msg.py`
 
 ---
 
-## Author
+### Task 7 - Safe integer print with error message
 
-**Gwenaelle PICHOT**  
-Student at Holberton School  
-Track: Higher Level Programming  
-Project: Python - Exceptions
+- Advanced
+- Print a value as an integer; on failure, print the error to `stderr` preceded by `Exception:`
+- Uses `try/except`, `"{:d}".format()`; no `type()` allowed
+- Returns `True` on success, `False` on failure (with error output to `stderr`)
 
+**Files:** `100-safe_print_integer_err.py`
 
+---
 
+### Task 8 - Safe function
+
+- Advanced
+- Execute any function safely, catching any exception and printing it to `stderr` preceded by `Exception:`
+- Uses `try/except`; the first argument is always a function pointer
+- Returns the function's result, or `None` if an exception occurs
+
+**Files:** `101-safe_function.py`
+
+---
+
+### Task 9 - ByteCode -> Python #4
+
+- Advanced
+- Reverse-engineer a Python bytecode block and rewrite the equivalent Python function `magic_calculation(a, b)`
+- The function must replicate the exact logic encoded in the given bytecode
+- Returns the result matching the bytecode's behavior, using a loop, exception handling, and conditional raising
+
+**Files:** `102-magic_calculation.py`
+
+---
+
+## 🤝 Contributions & Acknowledgements
+
+Thanks to everyone at Holberton School for reminding me that a good `try/except` block is not admitting defeat — it's engineering maturity. Also, shout-out to the bytecode task for the existential crisis it provided.
+
+---
+
+## 👤 Author
+
+**Gwenaelle PICHOT**
+- Student at Holberton School
+- Track: holbertonschool-higher_level_programming
+- Project: python-exceptions

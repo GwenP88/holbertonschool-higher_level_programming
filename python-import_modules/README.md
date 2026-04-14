@@ -1,37 +1,53 @@
-![ChatGPT Introduction Banner](assets/banner.png)
+# Python - import & modules
 
-# Python - Import & Modules
-
-This project focuses on understanding how Python modules work, how to import functions and variables, how to use command line arguments, and how to prevent code from being executed when a file is imported.
+> Why write everything yourself when Python lets you borrow from others? (Legally, this time.)
 
 ---
 
-## Learning Objectives
+## 📝 Description
 
-During this project, I learned why Python programming is so awesome: it is readable, powerful, and it usually does what you expect without unnecessary drama. 
-I learned how to import functions from another file and how to actually use those imported functions without breaking everything.
-
-I also learned how to create my own modules, how to explore what they contain using the built-in `dir()` function, and how to prevent parts of a script from running when the file is imported instead of executed directly (because sometimes Python needs clear boundaries).
-
-Finally, I learned how to use command line arguments with Python programs, which made my scripts feel much more flexible, professional, and slightly less “toy example”.
+This project explores one of Python's most powerful features: the ability to import and reuse code across files. I learn how to create modules, import specific functions or variables from them, and use command-line arguments to make scripts dynamic and flexible. I also discover how to prevent code from running on import, how to use the built-in `dir()` function to inspect modules, and how Python handles arbitrarily large numbers with ease. Think of this project as building my first real toolbox.
 
 ---
 
-## Requirements
+## 🎯 Learning Objectives
 
-### General
-- Allowed editors: `vi`, `vim`, `emacs`
-- All files will be interpreted/compiled on Ubuntu 22.04 LTS using `python3` (version 3.10.*)
+By the end of this project, I am able to explain why Python programming is considered a joy to work with, particularly because of its clean syntax and powerful standard library. I know how to import functions from another file and use them in a new script, how to create my own modules, and how to use the built-in `dir()` function to inspect what a module exposes. I understand how to prevent code from being executed when a script is imported by using the `if __name__ == "__main__":` guard. I am also able to use command-line arguments in my Python programs by working with `sys.argv`, making my scripts dynamic and reusable from the terminal.
+
+---
+
+## 🛠️ Technologies Used
+
+This project uses Python 3 (version 3.10.*), interpreted on Ubuntu 22.04 LTS. Style compliance is enforced with pycodestyle (version 2.7.*). No external libraries are required — just Python, its standard library, and some well-placed imports.
+
+---
+
+## ⚙️ Requirements
+
+- OS: Ubuntu 22.04 LTS
+- Python version: `python3` (3.10.*)
 - All files must end with a new line
 - The first line of all files must be exactly: `#!/usr/bin/python3`
-- A `README.md` file at the root of the project folder is mandatory
-- Code must follow `pycodestyle` (version 2.7.*)
+- A README.md file at the root of the project folder is mandatory
+- Code must follow pycodestyle (version 2.7.*)
 - All files must be executable
-- File length will be tested using `wc`
+- File length is tested using `wc`
+- No use of `*` for importing or `__import__` unless explicitly stated
+- All scripts must be protected from execution when imported
 
 ---
 
-## Usage / Execution
+## 🚀 Installation
+
+```bash
+git clone https://github.com/GwenP88/holbertonschool-higher_level_programming.git
+cd holbertonschool-higher_level_programming/python-import_modules
+```
+
+---
+
+## ▶️ Usage / Execution
+
 All Python scripts can be executed in two ways:
 
 ### 1. Direct execution
@@ -47,186 +63,148 @@ Run the script with Python:
 python3 filename.py
 ```
 
----
-
-## Project Progress
-
-<p align="center">
-  <img src="assets/progress_barre_100.gif" alt="Mandatory tasks progress" width="80%">
-</p>
-
-<p align="center">
-  <sub>Mandatory tasks completion: 100% ---  Advanced tasks completion: 100%</sub>
-</p>
-
----
-
-## Tasks
-
-### 0. Import a simple function from a simple file
-**File:** `0-add.py`
-
-Write a program that imports the function `add(a, b)` from `add_0.py` and prints the result of `1 + 2 = 3`.
-
-Constraints:
-- Use `print` with string format to display integers
-- Assign `a = 1` and `b = 2` on two different lines
-- Use `a` and `b` as arguments when calling `add`
-- Output format: `<a> + <b> = <add(a, b)>`
-- Use the word `add_0` only once
-- Do not use `*` for importing or `__import__`
-- The code must not be executed when imported
-
----
-
-### 1. My first toolbox!
-**File:** `1-calculation.py`
-
-Write a program that imports functions from `calculator_1.py`, performs basic math operations, and prints the results.
-
-Constraints:
-- Do not use `print` more than 4 times
-- Define `a = 10` and `b = 5` on two different lines
-- Use only `a` and `b` as arguments when calling functions (including `print`)
-- Call each imported function (`add`, `sub`, `mul`, `div`)
-- Use the word `calculator_1` only once
-- Do not use `*` for importing or `__import__`
-- The code must not be executed when imported
-
-Expected output:
-
-```
-10 + 5 = 15
-10 - 5 = 5
-10 * 5 = 50
-10 / 5 = 2
+Some scripts accept command-line arguments:
+```bash
+./2-args.py Hello World
+./3-infinite_add.py 10 20 30
+./100-my_calculator.py 10 + 5
 ```
 
 ---
 
-### 2. How to make a script dynamic!
-**File:** `2-args.py`
+## 📊 Project Progress
 
-Write a program that prints the number of arguments and the list of its arguments.
+<p align="center">
+<img src="assets/progress_barre_100.gif" alt="Mandatory tasks progress" width="80%">
+</p>
 
-Rules:
-- If no arguments: print `0 arguments.`
-- If one argument: print `1 argument:`
-- Otherwise: print `<number> arguments:`
-- If there is at least one argument, print one line per argument:
-  - `<position>: <argument>` (position starts at 1)
-- Use `len(argv)` to get the number of arguments
-- The code must not be executed when imported
+<p align="center">
+<sub>Mandatory tasks completion: 100% --- Advanced tasks completion: 100%</sub>
+</p>
 
 ---
 
-### 3. Infinite addition
-**File:** `3-infinite_add.py`
+## ✨ Features
 
-Write a program that prints the result of the addition of all arguments.
+### Task 0 - Import a simple function from a simple file
 
-Rules:
-- Print the sum followed by a new line
-- Cast arguments to integers using `int()`
-- Handle very large numbers correctly
-- The code must not be executed when imported
+- **Status:** Mandatory
+- **Objective:** Import the `add` function from `add_0.py` and print the result of `1 + 2 = 3`.
+- **Constraint:** Use f-strings. Variables `a` and `b` must be defined on separate lines. The word `add_0` may only appear once. No `*` import or `__import__`. Script must not run on import.
+- **Expected behavior:** Running `./0-add.py` prints `1 + 2 = 3`.
 
----
-
-### 4. Who are you?
-**File:** `4-hidden_discovery.py` (must be located in `/tmp/`)
-
-Write a program that prints all the names defined by the compiled module `hidden_4.pyc`.
-
-Rules:
-- This task must be done on the sandbox only
-- Download `hidden_4.pyc` locally
-- Print one name per line, in alphabetical order
-- Print only names that do not start with `__`
-- The code must not be executed when imported
+**Files:** `0-add.py`
 
 ---
 
-### 5. Everything can be imported
-**File:** `5-variable_load.py`
+### Task 1 - My first toolbox!
 
-Write a program that imports the variable `a` from `variable_load_5.py` and prints its value.
+- **Status:** Mandatory
+- **Objective:** Import all four math functions from `calculator_1.py` and print the results of addition, subtraction, multiplication, and division.
+- **Constraint:** Maximum 4 `print` calls. Variables `a = 10` and `b = 5` defined on separate lines and used exclusively. `calculator_1` appears only once. Script must not run on import.
+- **Expected behavior:** Running `./1-calculation.py` prints `10 + 5 = 15`, `10 - 5 = 5`, `10 * 5 = 50`, `10 / 5 = 2`.
 
-Rules:
-- Do not use `*` for importing or `__import__`
-- The code must not be executed when imported
-
----
-
-### 6. Build my own calculator!
-**#advanced**  
-**File:** `100-my_calculator.py`
-
-- Imports all functions from `calculator_1.py`
-- Handles basic operations between two integers
-- Usage: `./100-my_calculator.py <a> <operator> <b>`
-- If the number of arguments is not 3:
-  - Prints `Usage: ./100-my_calculator.py <a> <operator> <b>`
-  - Exits with status `1`
-- Supported operators:
-  - `+` for addition
-  - `-` for subtraction
-  - `*` for multiplication
-  - `/` for division
-- If the operator is invalid:
-  - Prints `Unknown operator. Available operators: +, -, * and /`
-  - Exits with status `1`
-- Casts arguments to integers using `int()`
-- Prints the result as: `<a> <operator> <b> = <result>`
-- Does not use `*` for importing or `__import__`
-- Code must not execute when imported
+**Files:** `1-calculation.py`
 
 ---
 
-### 7. Easy print
-**#advanced**  
-**File:** `101-easy_print.py`
+### Task 2 - How to make a script dynamic!
 
-- Prints `#pythoniscool` followed by a new line
-- Program length: maximum **2 lines**
-- Does **not** use:
-  - `print`
-  - `eval`
-  - `open`
-  - `import sys`
+- **Status:** Mandatory
+- **Objective:** Write a script that prints the number of command-line arguments passed and lists each one with its position.
+- **Constraint:** Script must not run on import. Handle singular/plural grammar (`argument` vs `arguments`). Use `.` if no arguments, `:` otherwise.
+- **Expected behavior:** Running `./2-args.py Hello World` prints `2 arguments:` followed by `1: Hello` and `2: World`.
+
+**Files:** `2-args.py`
 
 ---
 
-### 8. ByteCode → Python #3
-**#advanced**  
-**File:** `102-magic_calculation.py`
+### Task 3 - Infinite addition
 
-- Implements the function `magic_calculation(a, b)`
-- The function must behave **exactly** like the provided Python bytecode
-- Uses imported functions `add` and `sub` from `magic_calculation_102`
-- Requires understanding of Python bytecode translation
-- Tip provided: *Python bytecode*
+- **Status:** Mandatory
+- **Objective:** Write a script that prints the sum of all command-line arguments, cast to integers.
+- **Constraint:** Script must not run on import. Must handle very large numbers correctly.
+- **Expected behavior:** Running `./3-infinite_add.py 79 10` prints `89`. Also handles numbers with hundreds of digits.
 
----
-
-### 9. Fast alphabet
-**#advanced**  
-**File:** `103-fast_alphabet.py`
-
-- Prints the alphabet in **uppercase**, followed by a new line
-- Program length: maximum **3 lines**
-- Does **not** use:
-  - Any loops
-  - Any conditional statements
-  - `str.join()`
-  - Any string literal
-  - Any system calls
+**Files:** `3-infinite_add.py`
 
 ---
 
-## Author
+### Task 4 - Who are you?
 
-**Gwenaelle PICHOT**  
-Student at Holberton School  
-Track: Higher Level Programming  
-Project: Python - Import & modules
+- **Status:** Mandatory
+- **Objective:** Print all names defined in a compiled module (`hidden_4.pyc`), excluding those starting with `__`, in alphabetical order.
+- **Constraint:** Must be run from `/tmp/` in the sandbox. Script must not run on import.
+- **Expected behavior:** Running `./4-hidden_discovery.py | sort` prints the exported names: `my_secret_santa`, `print_hidden`, `print_school`.
+
+**Files:** `4-hidden_discovery.py`
+
+---
+
+### Task 5 - Everything can be imported
+
+- **Status:** Mandatory
+- **Objective:** Import a variable `a` from `variable_load_5.py` and print its value.
+- **Constraint:** No `*` import or `__import__`. Script must not run on import.
+- **Expected behavior:** Running `./5-variable_load.py` prints `98`.
+
+**Files:** `5-variable_load.py`
+
+---
+
+### Task 6 - Build my own calculator!
+
+- **Status:** Advanced
+- **Objective:** Write a command-line calculator that imports all functions from `calculator_1.py` and handles `+`, `-`, `*`, and `/` operations.
+- **Constraint:** Usage: `./100-my_calculator.py a operator b`. Print an error and exit with code `1` if the argument count is wrong or the operator is unknown. No `*` import. Script must not run on import.
+- **Expected behavior:** Running `./100-my_calculator.py 3 + 5` prints `3 + 5 = 8`. Invalid usage prints descriptive error messages.
+
+**Files:** `100-my_calculator.py`
+
+---
+
+### Task 7 - Easy print
+
+- **Status:** Advanced
+- **Objective:** Print `#pythoniscool` followed by a newline, without using `print`, `eval`, `open`, or `import sys`.
+- **Constraint:** Maximum 2 lines long.
+- **Expected behavior:** Running `./101-easy_print.py` prints `#pythoniscool`.
+
+**Files:** `101-easy_print.py`
+
+---
+
+### Task 8 - ByteCode -> Python #3
+
+- **Status:** Advanced
+- **Objective:** Write a Python function `magic_calculation(a, b)` that replicates the exact behavior described by a given Python bytecode listing.
+- **Constraint:** The function must import `add` and `sub` from `magic_calculation_102`, and reproduce the bytecode logic precisely (conditional branching and loop over a range).
+- **Expected behavior:** The function returns `sub(a, b)` if `a >= b`, otherwise it returns `add(a, b)` incremented by values from `range(4, 6)`.
+
+**Files:** `102-magic_calculation.py`
+
+---
+
+### Task 9 - Fast alphabet
+
+- **Status:** Advanced
+- **Objective:** Print the uppercase alphabet followed by a newline.
+- **Constraint:** Maximum 3 lines long. No loops, no conditional statements, no `str.join()`, no string literals, no system calls.
+- **Expected behavior:** Running `./103-fast_alphabet.py` prints `ABCDEFGHIJKLMNOPQRSTUVWXYZ`.
+
+**Files:** `103-fast_alphabet.py`
+
+---
+
+## 🤝 Contributions & Acknowledgements
+
+Thanks to the Holberton School team for reminding me that good programmers don't reinvent the wheel — they import it. Also, a nod to Python's integer system for handling absurdly large numbers without breaking a sweat. That infinite addition task was a pleasant surprise.
+
+---
+
+## 👤 Author
+
+**Gwenaelle PICHOT**
+- Student at Holberton School
+- Track: holbertonschool-higher_level_programming
+- Project: python-import_modules

@@ -1,44 +1,51 @@
-![Python Data Structures Banner](assets/banner.png)
-
 # Python - More Data Structures: Set, Dictionary
 
-## Description
-This project focuses on practicing **Python data structures** beyond lists and tuples, especially:
-- **Sets** (unique elements, set operations)
-- **Dictionaries** (key/value pairs, iteration, updates)
-- **Lambda functions** and functional tools like **map**, **filter**, and **reduce**
+> Sets, dicts, lambdas, and the magical trio of map/filter/reduce — because lists alone just aren't enough.
 
 ---
 
-## Learning Objectives
-By the end of this project, you should be able to explain:
-- Why Python programming is awesome
-- What **sets** are, how to use them, and their common methods
-- When to use **sets vs lists**
-- How to iterate over a set
-- What **dictionaries** are, how to use them, and when to use them vs lists/sets
-- What a **key** is in a dictionary
-- How to iterate over a dictionary
-- What a **lambda** function is
-- What **map**, **filter**, and **reduce** do (and when to use them)
+## 📝 Description
+
+This project takes my Python data structure skills up a notch. I move beyond lists and tuples to explore sets, dictionaries, and functional programming tools like `map`, `filter`, and `lambda`. From squaring matrix values without a single loop to converting Roman numerals to integers on a whiteboard, this project challenges me to think more abstractly and write more expressive, Pythonic code.
 
 ---
 
-## Requirements
-- Allowed editors: `vi`, `vim`, `emacs`
+## 🎯 Learning Objectives
+
+By the end of this project, I am able to explain what sets are, how to use them, and when to prefer them over lists or dictionaries. I understand how to iterate over a set and use its most common methods. I can work with dictionaries, understand what keys are, iterate over key-value pairs, and know when a dictionary is the right tool for the job. I also understand what lambda functions are and how to apply `map`, `filter`, and `reduce` to transform and process data without explicit loops.
+
+---
+
+## 🛠️ Technologies Used
+
+This project is written entirely in Python 3 (version 3.8.5), running on Ubuntu 20.04 LTS. The `functools` module may be used for `reduce`. Code style is enforced with pycodestyle 2.7.*. One advanced task uses `map` exclusively — no `for` or `while` loops allowed.
+
+---
+
+## ⚙️ Requirements
+
 - OS: Ubuntu 20.04 LTS
 - Python version: `python3` (3.8.5)
 - All files must end with a new line
-- First line of all files: `#!/usr/bin/python3`
-- `README.md` is mandatory at the root of the project directory
-- Code style: `pycodestyle` (version 2.7.\*)
+- The first line of all files must be exactly: `#!/usr/bin/python3`
+- A README.md file at the root of the project is mandatory
+- Code must follow pycodestyle (version 2.7.*)
 - All files must be executable
-- File length will be checked using `wc`
-- No importing modules (unless explicitly allowed in a task)
+- No module imports allowed unless explicitly stated
 
 ---
 
-## Usage / Execution
+## 🚀 Installation
+
+```bash
+git clone https://github.com/GwenP88/holbertonschool-higher_level_programming.git
+cd holbertonschool-higher_level_programming/python-more_data_structures
+```
+
+---
+
+## ▶️ Usage / Execution
+
 All Python scripts can be executed in two ways:
 
 ### 1. Direct execution
@@ -56,173 +63,205 @@ python3 filename.py
 
 ---
 
-## Project Progress
+## 📊 Project Progress
 
 <p align="center">
-  <img src="assets/progress_barre_100.gif" alt="Mandatory tasks progress" width="80%">
+<img src="assets/progress_barre_100.gif" alt="Mandatory tasks progress" width="80%">
 </p>
 
 <p align="center">
-  <sub>Mandatory tasks completion: 100% ---  Advanced tasks completion: 100%</sub>
+<sub>Mandatory tasks completion: 100% --- Advanced tasks completion: 100%</sub>
 </p>
 
 ---
 
-## Project Files & Tasks
+## ✨ Features
 
-### 0. Squared simple
-**File:** `0-square_matrix_simple.py`  
-**Prototype:** `def square_matrix_simple(matrix=[]):`  
-Creates a **new matrix** where each integer is squared (original matrix unchanged).
+### Task 0 - Squared simple
 
----
+- Mandatory
+- Compute the square of all integers in a 2D matrix and return a new matrix
+- No imports; the original matrix must not be modified; regular loops or `map` allowed
+- Returns a new matrix of the same size with each value squared
 
-### 1. Search and replace
-**File:** `1-search_replace.py`  
-**Prototype:** `def search_replace(my_list, search, replace):`  
-Returns a **new list** where all occurrences of `search` are replaced by `replace`.
+**Files:** `0-square_matrix_simple.py`
 
 ---
 
-### 2. Unique addition
-**File:** `2-uniq_add.py`  
-**Prototype:** `def uniq_add(my_list=[]):`  
-Adds **each unique integer only once** and returns the total sum.
+### Task 1 - Search and replace
+
+- Mandatory
+- Replace all occurrences of a given element with another in a new list
+- No imports
+- Returns a new list with all matching elements replaced; original list unchanged
+
+**Files:** `1-search_replace.py`
 
 ---
 
-### 3. Present in both
-**File:** `3-common_elements.py`  
-**Prototype:** `def common_elements(set_1, set_2):`  
-Returns a set of elements **present in both** sets.
+### Task 2 - Unique addition
+
+- Mandatory
+- Add all unique integers in a list (each integer counted only once)
+- No imports
+- Returns the sum of all distinct integers in the list
+
+**Files:** `2-uniq_add.py`
 
 ---
 
-### 4. Only differents
-**File:** `4-only_diff_elements.py`  
-**Prototype:** `def only_diff_elements(set_1, set_2):`  
-Returns a set of elements present in **only one** of the sets.
+### Task 3 - Present in both
+
+- Mandatory
+- Return a set of elements that appear in both input sets
+- No imports
+- Returns the intersection of the two sets
+
+**Files:** `3-common_elements.py`
 
 ---
 
-### 5. Number of keys
-**File:** `5-number_keys.py`  
-**Prototype:** `def number_keys(a_dictionary):`  
-Returns the **number of keys** in a dictionary.
+### Task 4 - Only differents
+
+- Mandatory
+- Return a set of elements that appear in only one of the two input sets
+- No imports
+- Returns the symmetric difference of the two sets
+
+**Files:** `4-only_diff_elements.py`
 
 ---
 
-### 6. Print sorted dictionary
-**File:** `6-print_sorted_dictionary.py`  
-**Prototype:** `def print_sorted_dictionary(a_dictionary):`  
-Prints the dictionary with keys sorted **alphabetically** (first level only).
+### Task 5 - Number of keys
+
+- Mandatory
+- Return the number of keys in a dictionary
+- No imports
+- Returns an integer representing the total number of keys
+
+**Files:** `5-number_keys.py`
 
 ---
 
-### 7. Update dictionary
-**File:** `7-update_dictionary.py`  
-**Prototype:** `def update_dictionary(a_dictionary, key, value):`  
-Replaces or adds a key/value in a dictionary and returns the updated dictionary.
+### Task 6 - Print sorted dictionary
+
+- Mandatory
+- Print a dictionary's key-value pairs sorted alphabetically by key (first level only)
+- No imports; all keys are assumed to be strings
+- Keys are printed in alphabetical order with their associated values
+
+**Files:** `6-print_sorted_dictionary.py`
 
 ---
 
-### 8. Simple delete by key
-**File:** `8-simple_delete.py`  
-**Prototype:** `def simple_delete(a_dictionary, key=""):`  
-Deletes a key from a dictionary if it exists (otherwise no change).
+### Task 7 - Update dictionary
+
+- Mandatory
+- Replace or add a key-value pair in a dictionary
+- No imports; if the key exists, its value is updated; otherwise it is created
+- Returns the updated dictionary
+
+**Files:** `7-update_dictionary.py`
 
 ---
 
-### 9. Multiply by 2
-**File:** `9-multiply_by_2.py`  
-**Prototype:** `def multiply_by_2(a_dictionary):`  
-Returns a **new dictionary** with all integer values multiplied by 2.
+### Task 8 - Simple delete by key
+
+- Mandatory
+- Delete a key from a dictionary; if the key doesn't exist, the dictionary is unchanged
+- No imports
+- Returns the updated dictionary
+
+**Files:** `8-simple_delete.py`
 
 ---
 
-### 10. Best score
-**File:** `10-best_score.py`  
-**Prototype:** `def best_score(a_dictionary):`  
-Returns the key with the **highest integer value**. Returns `None` if input is `None` or empty.
+### Task 9 - Multiply by 2
+
+- Mandatory
+- Return a new dictionary with all integer values multiplied by 2
+- No imports; the original dictionary is not modified
+- Returns a new dictionary with doubled values
+
+**Files:** `9-multiply_by_2.py`
 
 ---
 
-### 11. Multiply by using map
-**File:** `11-multiply_list_map.py`  
-**Prototype:** `def multiply_list_map(my_list=[], number=0):`  
-Returns a new list with all values multiplied by `number`, **without loops**, using `map`.  
-Constraint: file must be **max 3 lines**.
+### Task 10 - Best score
+
+- Mandatory
+- Return the key with the highest integer value in a dictionary
+- No imports; returns `None` if the dictionary is empty or `None`
+- Returns the key associated with the maximum value
+
+**Files:** `10-best_score.py`
 
 ---
 
-### 12. Roman to Integer
-**File:** `12-roman_to_int.py`  
-**Prototype:** `def roman_to_int(roman_string):`  
-Converts a Roman numeral string to an integer.
-- Assumes range: **1 to 3999**
-- If `roman_string` is not a string or is `None`, return `0`
+### Task 11 - Multiply by using map
+
+- Mandatory
+- Return a new list with all values multiplied by a given number, using `map` — no loops
+- No imports; file must be 3 lines maximum
+- Returns a new list of the same length with each element multiplied
+
+**Files:** `11-multiply_list_map.py`
 
 ---
 
-## Advanced Tasks
+### Task 12 - Roman to Integer
 
-### 13. Weighted Average! (#advanced)
-Write a function that returns the weighted average of all integers tuple `(score, weight)`.
+- Mandatory
+- Convert a Roman numeral string to an integer (values between 1 and 3999)
+- No Google allowed — whiteboard first; returns `0` if input is not a string or is `None`
+- Returns the integer value corresponding to the Roman numeral
 
-**Prototype:** `def weight_average(my_list=[]):`
-
-**Requirements:**
-- Returns `0` if the list is empty
-- You are not allowed to import any module
-
-**Repository:**
-- **File:** `100-weight_average.py`
-- **Directory:** `python-more_data_structures`
+**Files:** `12-roman_to_int.py`
 
 ---
 
-### 14. Squared by using map (#advanced)
-Write a function that computes the square value of all integers of a matrix using `map`.
+### Task 13 - Weighted average!
 
-**Prototype:** `def square_matrix_map(matrix=[]):`
+- Advanced
+- Return the weighted average of a list of `(score, weight)` tuples
+- No imports; returns `0` if the list is empty
+- Returns the computed weighted average as a float
 
-**Requirements:**
-- Matrix is a 2D array
-- Returns a new matrix of the same size
-- Each value is the square of the input value
-- Initial matrix must not be modified
-- You are not allowed to import any module
-- You must use `map`
-- You are not allowed to use `for` or `while`
-- File must be maximum 3 lines
-
-**Repository:**
-- **File:** `101-square_matrix_map.py`
-- **Directory:** `python-more_data_structures`
+**Files:** `100-weight_average.py`
 
 ---
 
-### 15. Delete by Value (#advanced)
-Write a function that deletes keys with a specific value in a dictionary.
+### Task 14 - Squared by using map
 
-**Prototype:** `def complex_delete(a_dictionary, value):`
+- Advanced
+- Square all values in a 2D matrix using `map` only — no `for`, no `while`, max 3 lines
+- No imports; original matrix must not be modified
+- Returns a new squared matrix of the same dimensions
 
-**Requirements:**
-- If the value doesn’t exist, the dictionary won’t change
-- All keys having the searched value must be deleted
-- You are not allowed to import any module
-
-**Repository:**
-- **File:** `102-complex_delete.py`
-- **Directory:** `python-more_data_structures`
+**Files:** `101-square_matrix_map.py`
 
 ---
 
-## Author
+### Task 15 - Delete by value
 
-**Gwenaelle PICHOT**  
-Student at Holberton School  
-Track: Higher Level Programming  
-Project: Python - Data & Structures (part 2)
+- Advanced
+- Delete all keys in a dictionary that have a specific value
+- No imports; if the value doesn't exist, the dictionary is unchanged
+- Returns the updated dictionary with all matching keys removed
 
+**Files:** `102-complex_delete.py`
 
+---
+
+## 🤝 Contributions & Acknowledgements
+
+Thanks to the Holberton School staff and students who made the whiteboard Roman numeral challenge feel slightly less terrifying. You know who you are.
+
+---
+
+## 👤 Author
+
+**Gwenaelle PICHOT**
+- Student at Holberton School
+- Track: holbertonschool-higher_level_programming
+- Project: python-more_data_structures

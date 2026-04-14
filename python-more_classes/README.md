@@ -1,34 +1,29 @@
-![Python Banner](assets/banner.png)
+# Python - More Classes and Objects
 
-# More Classes and Objects
-
-## Description
-This project is a progressive deep dive into **Object-Oriented Programming (OOP) in Python**, built around a single core concept: the `Rectangle` class.
-
-Starting from an empty shell, the rectangle evolves step by step:
-- it gains private attributes,
-- validation through properties,
-- behavior via instance, class, and static methods,
-- meaningful string representations,
-- lifecycle tracking,
-- and finally, advanced object comparison and construction.
-
-Behind the scenes, this project is less about rectangles and more about **understanding how Python handles objects, attributes, and classes** — the Pythonic way.
+> Rectangles, class attributes, static methods, and the N Queens problem — OOP is getting serious.
 
 ---
 
-## Learning Objectives
-With this project, I learned how Object-Oriented Programming works in Python by building a `Rectangle` class that slowly became smarter than it looks. Along the way, I understood the difference between a class and an instance, how objects are created, and how Python stores and manages attributes behind the scenes.
+## 📝 Description
 
-I learned how to use `self`, revied `__init__`,  and how private attributes and properties help keep data clean and under control (because chaos is not a design pattern). This project also taught me how objects define their own behavior using special methods like `__str__`, `__repr__`, and `__del__`, making them readable, reproducible, and capable of saying goodbye properly.
-
-By working with class attributes, class methods, and static methods, I discovered when logic belongs to the class itself rather than to individual instances. Finally, exploring `__dict__` helped me understand how Python finds attributes and glues everything together internally.
-
-In the end, this project gave me a solid understanding of Python’s object model and how to write clean, maintainable OOP code — all thanks to a rectangle that did way more than just exist.
+This project deepens my understanding of Object-Oriented Programming by building a full-featured `Rectangle` class from the ground up, task by task. I explore class attributes vs instance attributes, static methods, class methods, `__str__` vs `__repr__`, instance deletion callbacks, and even a customizable print symbol. The grand finale is the N Queens puzzle — a classic backtracking algorithm that has nothing to do with rectangles but everything to do with problem-solving confidence.
 
 ---
 
-## Requirements
+## 🎯 Learning Objectives
+
+By the end of this project, I am able to explain the full OOP landscape in Python: classes, objects, instances, attributes, methods, `self`, `__init__`, and the principles of Data Abstraction, Encapsulation, and Information Hiding. I understand the difference between `__str__` and `__repr__`, and I know when to use each. I can create and use class attributes, class methods, and static methods. I understand how Python resolves attributes through `__dict__` and the attribute lookup chain, and I know how to use `getattr` effectively.
+
+---
+
+## 🛠️ Technologies Used
+
+This project is written entirely in Python 3 (version 3.8.5), running on Ubuntu 20.04 LTS. The N Queens task uses the `sys` module only. No other external modules are used. Code style is enforced with pycodestyle 2.7.*.
+
+---
+
+## ⚙️ Requirements
+
 - OS: Ubuntu 20.04 LTS
 - Python version: `python3` (3.8.5)
 - All files must end with a new line
@@ -40,150 +35,192 @@ In the end, this project gave me a solid understanding of Python’s object mode
 
 ---
 
-## Usage / Execution
-All Python scripts can be executed in two ways:
+## 🚀 Installation
 
-### 1. Direct execution
-Make the file executable and run it directly:
+```bash
+git clone https://github.com/GwenP88/holbertonschool-higher_level_programming.git
+cd holbertonschool-higher_level_programming/python-more_classes
+```
+
+---
+
+## ▶️ Usage / Execution
+
+### Scripts and classes:
 ```bash
 chmod +x filename.py
 ./filename.py
 ```
 
-### 2. Using Python interpreter
-Run the script with Python:
+### N Queens:
 ```bash
-python3 filename.py
+./101-nqueens.py N
 ```
+Where `N` is an integer ≥ 4.
 
 ---
 
-## Project Progress
+## 📊 Project Progress
+
 <p align="center">
 <img src="assets/progress_barre_100.gif" alt="Mandatory tasks progress" width="80%">
 </p>
 
 <p align="center">
-<sub>Mandatory tasks completion: 100%</sub>
+<sub>Mandatory tasks completion: 100% --- Advanced tasks completion: 0%</sub>
 </p>
 
 ---
 
-## Tasks
+## ✨ Features
 
-### Task 0 – Simple Rectangle
-- **Status:** Completed
-- **Objective:** Create the most minimal rectangle possible.
-- **Constraint:** No imports allowed.
-- **Expected behavior:** Define an empty `Rectangle` class that can be instantiated without errors.
+### Task 0 - Simple rectangle
 
-**Files**
-- `0-rectangle.py`
+- Mandatory
+- Define an empty class `Rectangle` with no attributes or methods
+- No imports
+- Creates a valid, empty `Rectangle` object with an empty `__dict__`
 
----
-
-### Task 1 – Real Definition of a Rectangle
-- **Status:** Completed
-- **Objective:** Give the rectangle real dimensions.
-- **Constraint:** Width and height must be integers and cannot be negative.
-- **Expected behavior:** The rectangle stores private attributes and validates input using properties.
-
-**Files**
-- `1-rectangle.py`
+**Files:** `0-rectangle.py`
 
 ---
 
-### Task 2 – Area and Perimeter
-- **Status:** Completed
-- **Objective:** Teach the rectangle how to measure itself.
-- **Constraint:** If width or height is zero, perimeter must be zero.
-- **Expected behavior:** The rectangle can compute its area and perimeter accurately.
+### Task 1 - Real definition of a rectangle
 
-**Files**
-- `2-rectangle.py`
+- Mandatory
+- Add private `width` and `height` attributes with properties and setters; both must be non-negative integers
+- No imports; validation raises `TypeError` or `ValueError` with descriptive messages
+- Accessible and updatable via property getters/setters from outside the class
 
----
-
-### Task 3 – String Representation
-- **Status:** Completed
-- **Objective:** Make the rectangle printable.
-- **Constraint:** Use the `#` character for display.
-- **Expected behavior:** Printing the rectangle displays its shape, or an empty string if dimensions are zero.
-
-**Files**
-- `3-rectangle.py`
+**Files:** `1-rectangle.py`
 
 ---
 
-### Task 4 – Eval is Magic
-- **Status:** Completed
-- **Objective:** Allow the rectangle to recreate itself.
-- **Constraint:** `repr()` must return a valid constructor string.
-- **Expected behavior:** A new rectangle can be created using `eval(repr(rectangle))`.
+### Task 2 - Area and Perimeter
 
-**Files**
-- `4-rectangle.py`
+- Mandatory
+- Add `area()` and `perimeter()` public instance methods; perimeter is `0` if either dimension is `0`
+- No imports
+- Returns correct integer area and perimeter for any valid rectangle
 
----
-
-### Task 5 – Detect Instance Deletion
-- **Status:** Completed
-- **Objective:** Track when a rectangle is deleted.
-- **Constraint:** Print a specific message upon deletion.
-- **Expected behavior:** The message `Bye rectangle...` is displayed when an instance is destroyed.
-
-**Files**
-- `5-rectangle.py`
+**Files:** `2-rectangle.py`
 
 ---
 
-### Task 6 – How Many Instances
-- **Status:** Completed
-- **Objective:** Count how many rectangles exist at any time.
-- **Constraint:** Use a class attribute to track instances.
-- **Expected behavior:** The number of active rectangle instances updates correctly on creation and deletion.
+### Task 3 - String representation
 
-**Files**
-- `6-rectangle.py`
+- Mandatory
+- Implement `__str__` to print the rectangle using `#` characters; returns an empty string if either dimension is `0`
+- No imports; `repr()` still returns the default object representation
+- `print(rectangle)` and `str(rectangle)` output a visual `#` grid
 
----
-
-### Task 7 – Change Representation
-- **Status:** Completed
-- **Objective:** Customize how rectangles are displayed.
-- **Constraint:** The print symbol can be any type.
-- **Expected behavior:** The rectangle uses the class or instance `print_symbol` for its string representation.
-
-**Files**
-- `7-rectangle.py`
+**Files:** `3-rectangle.py`
 
 ---
 
-### Task 8 – Compare Rectangles
-- **Status:** Completed
-- **Objective:** Compare rectangles based on their area.
-- **Constraint:** Both arguments must be instances of `Rectangle`.
-- **Expected behavior:** The static method returns the biggest rectangle, or the first one if areas are equal.
+### Task 4 - Eval is magic
 
-**Files**
-- `8-rectangle.py`
+- Mandatory
+- Implement `__repr__` to return `Rectangle(width, height)` — a string that can recreate the instance via `eval()`
+- No imports; `__str__` and `__repr__` serve different purposes and are both defined
+- `eval(repr(rectangle))` creates a new, identical `Rectangle` instance
 
----
-
-### Task 9 – A Square is a Rectangle
-- **Status:** Completed
-- **Objective:** Create a square using the rectangle class.
-- **Constraint:** Width and height must be equal.
-- **Expected behavior:** The class method returns a valid square-shaped rectangle.
-
-**Files**
-- `9-rectangle.py`
-
+**Files:** `4-rectangle.py`
 
 ---
 
-## Authors
+### Task 5 - Detect instance deletion
+
+- Mandatory
+- Implement `__del__` to print `Bye rectangle...` when an instance is deleted
+- No imports
+- Deletion of any `Rectangle` instance triggers the farewell message
+
+**Files:** `5-rectangle.py`
+
+---
+
+### Task 6 - How many instances
+
+- Mandatory
+- Add a public class attribute `number_of_instances` initialized to `0`; incremented at creation, decremented at deletion
+- No imports; tracks the live count of `Rectangle` instances across the program
+- `Rectangle.number_of_instances` always reflects the current number of active instances
+
+**Files:** `6-rectangle.py`
+
+---
+
+### Task 7 - Change representation
+
+- Mandatory
+- Add a public class attribute `print_symbol` (default `#`) used by `__str__`; can be any type, changed per instance or per class
+- No imports; `str(row_of_symbol * width)` for each row
+- The rectangle can be printed with any symbol or even a list as its character
+
+**Files:** `7-rectangle.py`
+
+---
+
+### Task 8 - Compare rectangles
+
+- Mandatory
+- Add a static method `bigger_or_equal(rect_1, rect_2)` that returns the rectangle with the larger area; returns `rect_1` for ties
+- No imports; raises `TypeError` if either argument is not a `Rectangle` instance
+- Works as a class utility without needing an instance to call it
+
+**Files:** `8-rectangle.py`
+
+---
+
+### Task 9 - A square is a rectangle
+
+- Mandatory
+- Add a class method `square(cls, size=0)` that returns a new `Rectangle` with `width == height == size`
+- No imports; demonstrates how a class method can act as an alternative constructor
+- `Rectangle.square(5)` returns a proper 5×5 rectangle
+
+**Files:** `9-rectangle.py`
+
+---
+
+### Task 10 - Class and instance attributes
+
+- Advanced - **This task is still in progress — my future self is on it.**
+- Write a blog post explaining class vs instance attributes, creation methods, differences, trade-offs, and how Python handles them through `__dict__`
+- Must include examples and at least one image; published on Medium or LinkedIn and shared
+- A clear, illustrated explanation of one of OOP's most misunderstood distinctions
+
+**Files:** *(blog post link — see repository)*
+
+---
+
+### Task 11 - N Queens
+
+- Advanced - **This task is still in progress — my future self is on it.**
+- Write a program `101-nqueens.py` that solves the N Queens puzzle for any N ≥ 4 using backtracking
+- Only `sys` import allowed; validates arguments and exits with status 1 for invalid input; prints all solutions
+- Prints every valid queen placement as a list of `[row, col]` pairs, one solution per line
+
+**Files:** `101-nqueens.py`
+
+---
+
+## 🔮 What’s Next
+
+I plan to continue working on this project by completing the advanced tasks that are not done yet. This will allow me to deepen my understanding, improve my skills, and push a bit further beyond the basics (because stopping halfway is not really my style).
+
+---
+
+## 🤝 Contributions & Acknowledgements
+
+Thanks to everyone who survived the N Queens task alongside me. Backtracking on a whiteboard at 11pm builds character — and also a very healthy respect for recursion.
+
+---
+
+## 👤 Author
+
 **Gwenaelle PICHOT**
 - Student at Holberton School
-- Track: Higher Level Programming
-- Project: More Classes and Objects
+- Track: holbertonschool-higher_level_programming
+- Project: python-more_classes

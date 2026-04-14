@@ -1,147 +1,156 @@
-![Python - Serialization Banner](assets/banner.png)
-
 # Python - Serialization
 
-## Description
-This project explores marshaling and serialization, two essential concepts in computer science that allow data to be stored, transmitted, and reconstructed efficiently. 
-Through a series of practical tasks, the project demonstrates how Python objects can be transformed into structured formats such as JSON, Pickle, and XML, and then restored to their original state.
-
-The project focuses on real-world use cases such as file persistence, data exchange between systems, and object reconstruction. 
-By implementing multiple serialization techniques, it provides a solid understanding of how structured data flows between applications, files, and networks.
+> From Python objects to JSON, pickle, CSV, XML, and even across a network — data finds a way.
 
 ---
 
-## Learning Objectives
-Through this project, I learned to clearly distinguish between marshaling and serialization and to understand how they are used in practical software development scenarios. 
-I learned how to serialize Python dictionaries into JSON format and restore them back into usable Python objects.
-I gained hands-on experience working with the pickle module to serialize and deserialize custom Python classes while handling potential errors safely.
-I also learned how to convert data between different structured formats such as CSV, JSON, and XML, and understood the implications of format choice in terms of structure, readability, and data type management.
+## 📝 Description
+
+This project explores the fascinating world of marshaling and serialization in Python. I learn how to transform Python objects into formats that can be stored, transmitted, and reconstructed — using JSON, pickle, CSV, XML, and even raw socket communication. By working through each format, I develop a clear understanding of when and why each serialization method is the right tool for the job, and how data persistence and transmission work in real-world applications.
 
 ---
 
-## Requirements
+## 🎯 Learning Objectives
+
+By the end of this project, I am able to explain the differences and similarities between marshaling and serialization. I can implement serialization in practical scenarios using JSON, pickle, CSV, and XML. I understand how serialized data is used in web applications, databases, and network communications, and I can evaluate the performance implications and trade-offs of different serialization formats.
+
+---
+
+## 🛠️ Technologies Used
+
+This project is written in Python 3 (version 3.8.5), running on Ubuntu 20.04 LTS. It makes use of the following standard library modules: `json`, `pickle`, `csv`, `xml.etree.ElementTree`, and `socket`. No third-party libraries are required. Code style is enforced with pycodestyle 2.7.*.
+
+---
+
+## ⚙️ Requirements
+
 - OS: Ubuntu 20.04 LTS
 - Python version: `python3` (3.8.5)
 - All files must end with a new line
-- The first line of all files must be exactly: `#!/usr/bin/python3`
+- The first line of all files must be exactly: `#!/usr/bin/env python3`
 - A README.md file at the root of the project is mandatory
 - Code must follow pycodestyle (version 2.7.*)
 - All files must be executable
-- No module imports allowed unless explicitly stated
+- Module imports are allowed as needed per task
 
 ---
 
-## Usage / Execution
+## 🚀 Installation
+
+```bash
+git clone https://github.com/GwenP88/holbertonschool-higher_level_programming.git
+cd holbertonschool-higher_level_programming/python-serialization
+```
+
+---
+
+## ▶️ Usage / Execution
+
 All Python scripts can be executed in two ways:
 
 ### 1. Direct execution
-Make the file executable and run it directly:
 ```bash
-chmod +x filename.py
-./filename.py
+chmod +x main_XX_taskname.py
+./main_XX_taskname.py
 ```
 
 ### 2. Using Python interpreter
-Run the script with Python:
 ```bash
-python3 filename.py
+python3 main_XX_taskname.py
 ```
+
+### For the client-server task (Task 4):
+```bash
+python3 main_04_net.py
+```
+The server runs in a separate thread; client sends data automatically.
 
 ---
 
-## Project Progress
+## 📊 Project Progress
+
 <p align="center">
 <img src="assets/progress_barre_100.gif" alt="Mandatory tasks progress" width="80%">
 </p>
 
 <p align="center">
-<sub>Mandatory tasks completion: 100%</sub>
+<sub>Mandatory tasks completion: 100% --- Advanced tasks completion: 0%</sub>
 </p>
 
 ---
 
-## Tasks
+## ✨ Features
+
 ### Task 0 - Basic Serialization
 
-- **Task status**  
-Completed
+- Mandatory
+- Write a module with two functions: `serialize_and_save_to_file(data, filename)` that serializes a Python dictionary to a JSON file, and `load_and_deserialize(filename)` that reads and returns the deserialized dictionary from a JSON file
+- If the output file already exists, it is overwritten; uses the `json` module
+- Round-trips a Python dictionary to disk and back without any data loss
 
-- **Task objectives**  
-Implement a Python module capable of serializing a dictionary into a JSON file and deserializing JSON data back into a Python dictionary.
-
-- **Task constraint**  
-The module must define two functions: `serialize_and_save_to_file(data, filename)` and `load_and_deserialize(filename)`. The output file must be overwritten if it already exists. Only standard Python libraries may be used.
-
-- **Expected behavior**  
-The function must correctly write dictionary data into a JSON file and reconstruct the exact dictionary structure when loading the file. The deserialized output must match the original input data.
-
-**Files:**  
-`task_00_basic_serialization.py`
+**Files:** `task_00_basic_serialization.py`
 
 ---
 
 ### Task 1 - Pickling Custom Classes
 
-- **Task status**  
-Completed
+- Mandatory
+- Create a `CustomObject` class with `name`, `age`, and `is_student` attributes; add a `display()` method to print them; implement `serialize(filename)` and `deserialize(filename)` methods using the `pickle` module
+- Handles file-not-found and malformed file exceptions gracefully; returns `None` on failure
+- Saves and reconstructs a custom Python object from a `.pkl` binary file with full fidelity
 
-- **Task objectives**  
-Create a custom Python class and implement serialization and deserialization of class instances using the pickle module.
-
-- **Task constraint**  
-The class must include attributes (`name`, `age`, `is_student`) and methods `serialize(self, filename)` and `@classmethod deserialize(cls, filename)`. Exception handling must be implemented to return `None` if the file does not exist or is malformed.
-
-- **Expected behavior**  
-An instance of the custom class must be saved to a `.pkl` file and correctly restored as a new object instance with identical attribute values. The `display` method must output formatted attribute information.
-
-**Files:**  
-`task_01_pickle.py`
+**Files:** `task_01_pickle.py`
 
 ---
 
 ### Task 2 - Converting CSV Data to JSON Format
 
-- **Task status**  
-Completed
+- Mandatory
+- Write a function `convert_csv_to_json(csv_filename)` that reads a CSV file using `csv.DictReader`, converts each row to a dictionary, serializes the list to JSON, and writes it to `data.json`
+- Returns `True` on success, `False` if the CSV file is not found; uses `csv` and `json` modules
+- Produces a valid `data.json` file from any properly formatted CSV input
 
-- **Task objectives**  
-Read structured data from a CSV file and convert it into JSON format using serialization techniques.
-
-- **Task constraint**  
-Use `csv.DictReader` to read the CSV content and the `json` module to serialize the data. The function must return `True` if successful and `False` if an exception occurs.
-
-- **Expected behavior**  
-The CSV data must be transformed into a list of dictionaries and written into `data.json` in valid JSON format. The resulting JSON structure must accurately reflect the original CSV rows.
-
-**Files:**  
-`task_02_csv.py`
+**Files:** `task_02_csv.py`
 
 ---
 
 ### Task 3 - Serializing and Deserializing with XML
 
-- **Task status**  
-Completed
+- Mandatory
+- Write two functions: `serialize_to_xml(dictionary, filename)` that converts a Python dictionary to XML and saves it, and `deserialize_from_xml(filename)` that parses an XML file and returns the reconstructed dictionary
+- Uses `xml.etree.ElementTree`; handles type management carefully since XML stores everything as strings
+- Produces a clean XML file from a dictionary and reconstructs the exact dictionary from the XML
 
-- **Task objectives**  
-Implement serialization and deserialization of a Python dictionary using XML format.
-
-- **Task constraint**  
-Use `xml.etree.ElementTree` from Python’s standard library. 
-The module must define two functions: `serialize_to_xml(dictionary, filename)` and `deserialize_from_xml(filename)`. 
-Care must be taken when handling data types, as XML stores values as text.
-
-- **Expected behavior**  
-The dictionary must be converted into a structured XML file with a root element and child elements for each key-value pair. 
-The deserialization function must correctly parse the XML file and reconstruct the dictionary.
-
-**Files:**  
-`task_03_xml.py`
+**Files:** `task_03_xml.py`
 
 ---
 
-## Authors
+### Task 4 - Client-Server Application with Serialization
+
+- Advanced - **This task is still in progress — my future self is on it.**
+- Build a client-server application using Python sockets; the client serializes a Python dictionary to JSON and sends it over a network connection; the server receives, deserializes, and prints the data
+- Uses `socket` and `json` modules; handles connection exceptions; client and server are defined as `send_data` and `start_server` functions
+- Demonstrates end-to-end serialization in a real network communication scenario with a server running in a thread
+
+**Files:** `task_04_net.py`
+
+---
+
+## 🔮 What’s Next
+
+I plan to continue working on this project by completing the advanced tasks that are not done yet. This will allow me to deepen my understanding, improve my skills, and push a bit further beyond the basics (because stopping halfway is not really my style).
+
+---
+
+## 🤝 Contributions & Acknowledgements
+
+Thanks to Holberton School for this project, which genuinely made me appreciate how much work happens between "save" and "load" in any real application. Sockets and XML were humbling in the best possible way.
+
+---
+
+## 👤 Author
+
 **Gwenaelle PICHOT**
 - Student at Holberton School
-- Track: Higher Level Programming
-- Project: Python - Serialization
+- Track: holbertonschool-higher_level_programming
+- Project: python-serialization

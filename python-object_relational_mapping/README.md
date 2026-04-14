@@ -1,336 +1,304 @@
-![Python - Object-relational mapping Banner](assets/banner.jpg)
+# Python - Object-Relational Mapping
 
-# Python - Object-relational mapping
-
-## Description
-This project introduces the connection between **Python** and **MySQL databases**.
-
-It is divided into two main parts:
-
-- using **MySQLdb** to connect Python scripts to a MySQL server and execute SQL queries,
-- using **SQLAlchemy** to work with an **Object Relational Mapper (ORM)** and manipulate database data through Python objects instead of raw SQL queries.
-
-The goal is to understand how to:
-- connect a Python script to a MySQL database,
-- retrieve and insert data with SQL,
-- protect queries from SQL injection,
-- map Python classes to database tables,
-- query and update data through SQLAlchemy models.
-
-This project is part of the **Higher Level Programming** track at **Holberton School**.
+> Bridging Python and MySQL — because raw SQL strings are so last decade.
 
 ---
 
-## Learning Objectives
-At the end of this project, you should be able to explain:
+## 📝 Description
 
-- how to connect to a MySQL database from a Python script,
-- how to `SELECT` rows in a MySQL table from Python,
-- how to `INSERT` rows in a MySQL table from Python,
-- what an **ORM** is,
-- how to map a Python class to a MySQL table,
-- the difference between raw SQL queries and ORM-based object manipulation,
-- why parameterized queries are important to prevent **SQL injection**,
-- how to use **SQLAlchemy** to create, query, update, and delete database objects.
+This project introduces me to two powerful ways of interacting with a MySQL database from Python: the low-level `MySQLdb` module and the elegant SQLAlchemy ORM. I start by writing raw SQL queries in Python scripts, quickly learn why SQL injection is terrifying, and then graduate to mapping Python classes directly to database tables. By the end, I can create, read, update, and delete database records without writing a single raw SQL string — just clean, Pythonic object manipulation.
 
 ---
 
-## Requirements
+## 🎯 Learning Objectives
+
+By the end of this project, I am able to connect to a MySQL database from a Python script, execute SELECT and INSERT queries using `MySQLdb`, and protect against SQL injection using parameterized queries. I understand what ORM means and how SQLAlchemy maps Python classes to MySQL tables. I can use SQLAlchemy sessions to query, insert, update, and delete records, and I know how to define relationships between models using foreign keys and `relationship()`.
+
+---
+
+## 🛠️ Technologies Used
+
+This project is written in Python 3 (version 3.8.5), running on Ubuntu 20.04 LTS. It uses MySQL 8.0 as the database backend, `MySQLdb` version 2.0.x for direct SQL queries, and `SQLAlchemy` version 1.4.x for ORM-based interactions. The `execute` method is not allowed with SQLAlchemy — only ORM queries are used. Code style is enforced with pycodestyle 2.7.*.
+
+---
+
+## ⚙️ Requirements
+
 - OS: Ubuntu 20.04 LTS
 - Python version: `python3` (3.8.5)
-- MySQL version: `8.0`
-- MySQLdb version: `2.0.x`
-- SQLAlchemy version: `1.4.x`
-- Allowed editors: `vi`, `vim`, `emacs`
+- MySQL version: 8.0
+- MySQLdb version: 2.0.x
+- SQLAlchemy version: 1.4.x
 - All files must end with a new line
 - The first line of all files must be exactly: `#!/usr/bin/python3`
-- A `README.md` file at the root of the project is mandatory
-- Code must follow `pycodestyle` (version `2.7.*`)
+- A README.md file at the root of the project is mandatory
+- Code must follow pycodestyle (version 2.7.*)
 - All files must be executable
-- File length will be checked using `wc`
-- All modules must have proper documentation
-- All classes must have proper documentation
-- All functions must have proper documentation
-- Documentation must be a real explanatory sentence
-- You are **not allowed** to use `execute` with SQLAlchemy unless explicitly required
-- No code should be executed when a file is imported
+- All modules, classes, and functions must have meaningful docstrings
+- `execute` is not allowed with SQLAlchemy
 
 ---
 
-## Installation
+## 🚀 Installation
 
-### MySQL 8.0
+```bash
+# Install MySQL
+sudo apt update && sudo apt install mysql-server
 
-```
-sudo apt update
-sudo apt install mysql-server
-mysql --version
-```
-
----
-
-### MySQLdb
-
-```
-sudo apt-get install python3-dev
-sudo apt-get install libmysqlclient-dev
-sudo apt-get install zlib1g-dev
+# Install MySQLdb
+sudo apt-get install python3-dev libmysqlclient-dev zlib1g-dev
 sudo pip3 install mysqlclient==2.0.3
-```
 
----
-
-
-### SQLAlchemy
-
-```
+# Install SQLAlchemy
 sudo pip3 install SQLAlchemy==1.4.22
+
+# Clone the repository
+git clone https://github.com/GwenP88/holbertonschool-higher_level_programming.git
+cd holbertonschool-higher_level_programming/python-object_relational_mapping
 ```
 
 ---
 
-## Usage / Execution
-All Python scripts can be executed in two ways:
+## ▶️ Usage / Execution
 
-### Direct execution
-Make the file executable and run it directly:
+All scripts take MySQL credentials as arguments:
 
-```
-chmod +x filename.py
-./filename.py
-```
-
----
-
-### Using Python interpreter
-Run the script with Python:
-
-```
-python3 filename.py
+```bash
+chmod +x script.py
+./script.py <mysql_username> <mysql_password> <database_name>
+# For scripts requiring an additional argument (state name, etc.):
+./script.py <mysql_username> <mysql_password> <database_name> <argument>
 ```
 
 ---
 
-## Project Progress
+## 📊 Project Progress
+
 <p align="center">
 <img src="assets/progress_barre_100.gif" alt="Mandatory tasks progress" width="80%">
 </p>
 
 <p align="center">
-<sub>Mandatory tasks completion: 100%</sub>
+<sub>Mandatory tasks completion: 100% --- Advanced tasks completion: 0%</sub>
 </p>
 
 ---
 
-## Tasks
+## ✨ Features
 
-### 0 - Get all states
-- **Status:** Mandatory
-- **Objective:** List all states from the database `hbtn_0e_0_usa`
-- **Constraints:** Use `MySQLdb`, connect to localhost on port `3306`, sort results by `states.id`
-- **Expected behavior:** Display all rows from the `states` table exactly as stored
+### Task 0 - Get all states
 
-**Files:**
-- `0-select_states.py`
+- Mandatory
+- List all states from `hbtn_0e_0_usa` using `MySQLdb`; takes 3 arguments (username, password, database)
+- Connects to localhost:3306; results sorted ascending by `states.id`; code must not run on import
+- Prints all state rows as tuples in ascending order by ID
 
----
-
-### 1 - Filter states
-- **Status:** Mandatory
-- **Objective:** List all states starting with the letter `N`
-- **Constraints:** Use `MySQLdb`, sort by `states.id`
-- **Expected behavior:** Display only states whose names begin with uppercase `N`
-
-**Files:**
-- `1-filter_states.py`
+**Files:** `0-select_states.py`
 
 ---
 
-### 2 - Filter states by user input
-- **Status:** Mandatory
-- **Objective:** Display states matching the user-provided name
-- **Constraints:** Use `MySQLdb` and build the query with `format`
-- **Expected behavior:** Return matching rows, but this version is vulnerable to SQL injection
+### Task 1 - Filter states
 
-**Files:**
-- `2-my_filter_states.py`
+- Mandatory
+- List all states whose name starts with `N` (uppercase) using `MySQLdb`
+- Same connection requirements; sorted by `states.id`
+- Prints only states whose name begins with the letter N
 
----
-
-### 3 - SQL Injection safe filter
-- **Status:** Mandatory
-- **Objective:** Securely display states matching user input
-- **Constraints:** Must be safe from MySQL injection
-- **Expected behavior:** Return exact matching states without allowing injected SQL commands
-
-**Files:**
-- `3-my_safe_filter_states.py`
+**Files:** `1-filter_states.py`
 
 ---
 
-### 4 - Cities by states
-- **Status:** Mandatory
-- **Objective:** List all cities with their corresponding state name
-- **Constraints:** Use `MySQLdb`, only one `execute()`, sort by `cities.id`
-- **Expected behavior:** Display each city with its city id and associated state
+### Task 2 - Filter states by user input
 
-**Files:**
-- `4-cities_by_state.py`
+- Mandatory
+- Display all states matching a user-supplied name argument using `MySQLdb` and `str.format()`
+- Takes 4 arguments; sorted by `states.id`; intentionally not injection-safe (contrast with Task 3)
+- Prints matching states based on the exact name provided
 
----
-
-### 5 - All cities by state
-- **Status:** Mandatory
-- **Objective:** List all cities belonging to a given state
-- **Constraints:** SQL injection free, only one `execute()`
-- **Expected behavior:** Print city names separated by commas in ascending order by `cities.id`
-
-**Files:**
-- `5-filter_cities.py`
+**Files:** `2-my_filter_states.py`
 
 ---
 
-### 6 - First state model
-- **Status:** Mandatory
-- **Objective:** Create the `State` class mapped to the `states` table
-- **Constraints:** Use `SQLAlchemy` and `declarative_base()`
-- **Expected behavior:** Define a model with `id` and `name` columns and create the table through metadata
+### Task 3 - SQL Injection... safe edition
 
-**Files:**
-- `model_state.py`
+- Mandatory
+- Rewrite Task 2 using parameterized queries to prevent SQL injection attacks
+- Uses `MySQLdb` with parameterized cursor execution; takes 4 arguments; safe from injection
+- Immune to payloads like `'; TRUNCATE TABLE states ; --` — the data is safe
 
----
-
-### 7 - All states via SQLAlchemy
-- **Status:** Mandatory
-- **Objective:** List all `State` objects from the database
-- **Constraints:** Import `Base` and `State` from `model_state`
-- **Expected behavior:** Display all states ordered by id in the format `<id>: <name>`
-
-**Files:**
-- `7-model_state_fetch_all.py`
+**Files:** `3-my_safe_filter_states.py`
 
 ---
 
-### 8 - First state
-- **Status:** Mandatory
-- **Objective:** Print the first `State` object from the database
-- **Constraints:** Do not fetch all states before displaying the first one
-- **Expected behavior:** Print the first state by id, or `Nothing` if the table is empty
+### Task 4 - Cities by states
 
-**Files:**
-- `8-model_state_fetch_first.py`
+- Mandatory
+- List all cities with their corresponding state names from `hbtn_0e_4_usa` using a single `execute()` call and a JOIN
+- Results sorted ascending by `cities.id`
+- Prints tuples of `(city_id, city_name, state_name)` in ascending city ID order
 
----
-
-### 9 - Contains a
-- **Status:** Mandatory
-- **Objective:** List all states containing the letter `a`
-- **Constraints:** Use SQLAlchemy query filtering
-- **Expected behavior:** Print all matching states ordered by id
-
-**Files:**
-- `9-model_state_filter_a.py`
+**Files:** `4-cities_by_state.py`
 
 ---
 
-### 10 - Get a state
-- **Status:** Mandatory
-- **Objective:** Print the id of the state matching the provided name
-- **Constraints:** SQL injection free
-- **Expected behavior:** Display the state id if found, otherwise print `Not found`
+### Task 5 - All cities by state
 
-**Files:**
-- `10-model_state_my_get.py`
+- Mandatory
+- List all cities belonging to a given state name using `MySQLdb`; SQL injection-safe; single `execute()` call
+- Takes 4 arguments; results sorted ascending by `cities.id`
+- Prints a comma-separated list of city names for the given state, or nothing if not found
 
----
-
-### 11 - Add a new state
-- **Status:** Mandatory
-- **Objective:** Insert a new `State` object named `Louisiana`
-- **Constraints:** Use SQLAlchemy session
-- **Expected behavior:** Add the record and print the newly created state's id
-
-**Files:**
-- `11-model_state_insert.py`
+**Files:** `5-filter_cities.py`
 
 ---
 
-### 12 - Update a state
-- **Status:** Mandatory
-- **Objective:** Update the name of the state with `id = 2`
-- **Constraints:** Change its name to `New Mexico`
-- **Expected behavior:** Persist the modification in the database
+### Task 6 - First state model
 
-**Files:**
-- `12-model_state_update_id_2.py`
+- Mandatory
+- Write `model_state.py` containing the `State` class and `Base = declarative_base()`; maps to the `states` MySQL table
+- Uses `Column`, `Integer`, `String`; `id` is auto-generated primary key; `name` max 128 chars, not null
+- Running the companion script creates the `states` table if it doesn't exist
 
----
-
-### 13 - Delete states
-- **Status:** Mandatory
-- **Objective:** Delete all states containing the letter `a`
-- **Constraints:** Use SQLAlchemy
-- **Expected behavior:** Remove all matching rows from the database
-
-**Files:**
-- `13-model_state_delete_a.py`
+**Files:** `model_state.py`
 
 ---
 
-### 14 - Cities in state
-- **Status:** Mandatory
-- **Objective:** Create the `City` model and print all cities grouped by state
-- **Constraints:** `City` must inherit from `Base`, include `state_id` as a foreign key to `states.id`
-- **Expected behavior:** Display results in the format `<state name>: (<city id>) <city name>`
+### Task 7 - All states via SQLAlchemy
 
-**Files:**
-- `model_city.py`
-- `14-model_city_fetch_by_state.py`
+- Mandatory
+- List all `State` objects from `hbtn_0e_6_usa` using a SQLAlchemy session query; sorted by `states.id`
+- Uses `from model_state import Base, State`; no raw `execute()`
+- Prints each state as `<id>: <name>` in ascending ID order
 
----
-
-## Key Concepts Covered
-
-- Python and MySQL connection with MySQLdb
-- SQL queries from Python
-- Secure parameter handling
-- SQL injection prevention
-- Database relationships
-- ORM fundamentals
-- SQLAlchemy model
-- Session management
-- Querying, inserting, updating, and deleting records with SQLAlchemy
+**Files:** `7-model_state_fetch_all.py`
 
 ---
 
-## Example Databases Used
+### Task 8 - First state
 
-This project relies on several practice databases:
+- Mandatory
+- Print the first `State` object (lowest `states.id`) using SQLAlchemy; print `Nothing` if the table is empty
+- Must not fetch all states before displaying; uses `first()` or equivalent
+- Prints `<id>: <name>` of the state with the lowest ID
 
-- hbtn_0e_0_usa
-- hbtn_0e_4_usa
-- hbtn_0e_6_usa
-- hbtn_0e_14_usa
-
-These databases include tables such as:
-
-- states
-- cities
+**Files:** `8-model_state_fetch_first.py`
 
 ---
 
-## Notes
+### Task 9 - Contains `a`
 
-- Make sure your MySQL server is running before executing the scripts.
-- Some scripts expect pre-existing databases and tables populated with test data.
-- SQLAlchemy warnings related to deprecated MySQL session variables can be ignored for this project.
-- All scripts are designed to respect Holberton project constraints.
+- Mandatory
+- List all `State` objects whose name contains the letter `a` using SQLAlchemy ORM filtering; sorted by `states.id`
+- No raw SQL
+- Prints all matching states as `<id>: <name>`
+
+**Files:** `9-model_state_filter_a.py`
 
 ---
 
-## Authors
+### Task 10 - Get a state
+
+- Mandatory
+- Print the ID of the `State` whose name matches the argument; print `Not found` if no match; SQL injection-safe
+- Takes 4 arguments; uses SQLAlchemy ORM filtering
+- Prints the `states.id` of the matching state, or `Not found`
+
+**Files:** `10-model_state_my_get.py`
+
+---
+
+### Task 11 - Add a new state
+
+- Mandatory
+- Add the `State` object "Louisiana" to `hbtn_0e_6_usa` using SQLAlchemy; print the new state's ID after creation
+- Uses session `add()` and `commit()`
+- Prints the auto-generated ID of the newly inserted state
+
+**Files:** `11-model_state_insert.py`
+
+---
+
+### Task 12 - Update a state
+
+- Mandatory
+- Change the name of the `State` with `id = 2` to "New Mexico" using SQLAlchemy
+- Uses session query and attribute update with `commit()`
+- The state at ID 2 is renamed in the database
+
+**Files:** `12-model_state_update_id_2.py`
+
+---
+
+### Task 13 - Delete states
+
+- Mandatory
+- Delete all `State` objects whose name contains the letter `a` using SQLAlchemy ORM
+- Uses ORM filtering and session `delete()` with `commit()`
+- All states with `a` in their name are permanently removed from the database
+
+**Files:** `13-model_state_delete_a.py`
+
+---
+
+### Task 14 - Cities in state
+
+- Mandatory
+- Write `model_city.py` defining the `City` class (linked to `cities` table with FK to `states`); write a script that prints all cities with their state name
+- `City` has `id`, `name`, and `state_id` (FK to `states.id`); sorted by `cities.id`
+- Prints `<state name>: (<city id>) <city name>` for all cities
+
+**Files:** `model_city.py`, `14-model_city_fetch_by_state.py`
+
+---
+
+### Task 15 - City relationship
+
+- Advanced - **This task is still in progress — my future self is on it.**
+- Extend `State` and `City` models with a `cities` relationship using `relationship()` and cascade delete; write a script creating "California" with "San Francisco"
+- Deleting a `State` automatically deletes all its linked `City` objects; `City` objects have a back-reference `state`
+- Demonstrates ORM-level cascading and relationship navigation between models
+
+**Files:** `relationship_city.py`, `relationship_state.py`, `100-relationship_states_cities.py`
+
+---
+
+### Task 16 - List relationship
+
+- Advanced - **This task is still in progress — my future self is on it.**
+- List all `State` objects and their linked `City` objects using the `cities` relationship; single query; sorted by `states.id` and `cities.id`
+- Uses the ORM relationship to avoid a second query; hierarchical display
+- Prints `<state id>: <state name>` then `\t<city id>: <city name>` for each city
+
+**Files:** `101-relationship_states_cities_list.py`
+
+---
+
+### Task 17 - From city
+
+- Advanced - **This task is still in progress — my future self is on it.**
+- List all `City` objects with their linked state name using the `state` back-reference; single query; sorted by `cities.id`
+- No raw SQL; uses the `state` relationship on `City`
+- Prints `<city id>: <city name> -> <state name>` for all cities
+
+**Files:** `102-relationship_cities_states_list.py`
+
+---
+
+## 🔮 What’s Next
+
+I plan to continue working on this project by completing the advanced tasks that are not done yet. This will allow me to deepen my understanding, improve my skills, and push a bit further beyond the basics (because stopping halfway is not really my style).
+
+---
+
+## 🤝 Contributions & Acknowledgements
+
+Thanks to Holberton School for the SQL injection demo — nothing makes parameterized queries feel more necessary than watching your entire table silently disappear. Lesson learned, permanently.
+
+---
+
+## 👤 Author
+
 **Gwenaelle PICHOT**
 - Student at Holberton School
-- Track: Higher Level Programming
-- Project: Python - Object-relational mapping
+- Track: holbertonschool-higher_level_programming
+- Project: python-object_relational_mapping

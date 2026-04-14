@@ -1,154 +1,171 @@
-![RESTful API Banner](assets/banner.png)
-
 # RESTful API
 
-## Description
-In a world where applications talk to each other more than humans do, RESTful APIs are the translators, diplomats, and sometimes the bouncers of the digital ecosystem.
-
-In this project, we explore how systems communicate over HTTP and HTTPS using REST principles. From understanding how a simple request travels across the web to building and securing our own API, this journey covers the essential foundations of modern backend development.
-
-We begin with the basics of HTTP structure, then move on to consuming public APIs from the command line and Python. Next, we build our own APIs using both Python’s built-in `http.server` module and the Flask framework. Finally, we secure our endpoints with authentication mechanisms, including Basic Authentication and JWT with role-based access control.
-
-By the end of this project, we don’t just “use” APIs — we understand how they think.
+> Building, consuming, securing, and documenting APIs — because data doesn't move itself.
 
 ---
 
-## Learning Objectives
-With this project, I learned how HTTP and HTTPS work, including how requests and responses are structured, how methods function, and how status codes reflect what happens on the server side. I practiced interacting with APIs directly from the command line using tools like `curl`, which helped me better understand what really happens behind a simple web request.
+## 📝 Description
 
-I learned how to fetch, parse, and manipulate JSON data using Python, and how to transform structured API data into other formats such as CSV files. I built a basic API using Python’s built-in `http.server` module, which allowed me to understand the mechanics of handling requests and sending responses without relying on external frameworks.
-
-I then developed a more structured REST API using Flask, where I implemented multiple routes, handled dynamic endpoints, and processed POST requests. I implemented authentication mechanisms, including Basic Authentication and JWT (JSON Web Token), to secure access to protected routes. I also protected endpoints using decorators and implemented role-based access control to differentiate between regular users and administrators.
-
-Finally, I learned how to handle authentication errors consistently and correctly, ensuring proper HTTP status codes are returned. Through this project, I gained a deeper appreciation for clean API design, structured logic, and clear documentation.
-
-From request to response, from an open endpoint to a secured system, I built and understood the full flow of a RESTful API.
+This project is a deep dive into the world of RESTful APIs — the backbone of modern web communication. I explore the full lifecycle of an API: from understanding the HTTP/HTTPS protocol at a conceptual level, to consuming public APIs from the command line, to building my own APIs from scratch using both Python's built-in `http.server` module and the Flask framework. I also tackle the critical topics of API security through authentication mechanisms and learn how to document APIs properly. By the end, I have a complete picture of how data flows between clients and servers in the real world.
 
 ---
 
-## Requirements
-- OS: Ubuntu 20.04 LTS
-- Python version: `python3` (3.8.5)
+## 🎯 Learning Objectives
+
+By the end of this project, I am able to explain the foundational differences between HTTP and HTTPS and understand how request/response cycles work, including the structure of HTTP methods and status codes. I know how to consume APIs directly from the command line using `curl`, including setting headers, making POST requests, and interpreting responses. I am able to write Python scripts that fetch data from external APIs using the `requests` library, parse JSON responses, and export structured data to CSV. I can build a basic HTTP server from scratch using Python's `http.server` module and serve different endpoints with JSON responses. I know how to develop a more robust REST API using Flask, including defining routes, handling dynamic parameters, parsing POST request bodies, and returning appropriate HTTP status codes. I understand the importance of API security and am able to implement both Basic HTTP Authentication and JWT token-based authentication with role-based access control using Flask extensions. Finally, I understand the value of API documentation standards like OpenAPI.
+
+---
+
+## 🛠️ Technologies Used
+
+This project uses Python 3 (version 3.9), along with the following libraries and frameworks: `requests` for API consumption, Flask for API development, Flask-HTTPAuth for basic authentication, Flask-JWT-Extended for JWT token-based security, and `werkzeug.security` for password hashing. The built-in Python modules `http.server`, `json`, and `csv` are also used. All testing is done with `curl` or Python scripts.
+
+---
+
+## ⚙️ Requirements
+
+- OS: Ubuntu (scripts tested with Python 3.9)
+- Python version: `python3` (3.9)
+- Install dependencies:
+  ```bash
+  pip install requests Flask Flask-HTTPAuth Flask-JWT-Extended
+  ```
 - All files must end with a new line
-- The first line of all files must be exactly: `#!/usr/bin/python3`
 - A README.md file at the root of the project is mandatory
-- Code must follow pycodestyle (version 2.7.*)
-- All files must be executable
-- No module imports allowed unless explicitly stated
+- No testing data should be committed (e.g., `users` dictionary must be empty on push)
 
 ---
 
-## Usage / Execution
-All Python scripts can be executed in two ways:
+## 🚀 Installation
 
-### 1. Direct execution
-Make the file executable and run it directly:
 ```bash
-chmod +x filename.py
-./filename.py
-```
-
-### 2. Using Python interpreter
-Run the script with Python:
-```bash
-python3 filename.py
+git clone https://github.com/GwenP88/holbertonschool-higher_level_programming.git
+cd holbertonschool-higher_level_programming/restful-api
+pip install requests Flask Flask-HTTPAuth Flask-JWT-Extended
 ```
 
 ---
 
-## Project Progress
+## ▶️ Usage / Execution
+
+### Running the http.server API (Task 3)
+```bash
+python3 task_03_http_server.py
+```
+
+### Running the Flask API (Tasks 4 & 5)
+```bash
+flask --app task_04_flask.py run
+flask --app task_05_basic_security.py run
+```
+
+### Testing with curl
+```bash
+curl http://localhost:5000/
+curl http://localhost:5000/data
+curl http://localhost:5000/status
+curl http://localhost:5000/users/jane
+curl -X POST -H "Content-Type: application/json" \
+  -d '{"username": "alice", "name": "Alice", "age": 25, "city": "Paris"}' \
+  http://localhost:5000/add_user
+```
+
+### Running Python scripts
+```bash
+python3 main_02_requests.py
+```
+
+---
+
+## 📊 Project Progress
+
 <p align="center">
 <img src="assets/progress_barre_100.gif" alt="Mandatory tasks progress" width="80%">
 </p>
 
 <p align="center">
-<sub>Mandatory tasks completion: 100%%</sub>
+<sub>Mandatory tasks completion: 100%</sub>
 </p>
 
 ---
 
-## Tasks
+## ✨ Features
 
-### 2 - Consuming and Processing Data from an API using Python
+### Task 0 - Basics of HTTP/HTTPS
 
-**Task status:** Mandatory  
-**Task objectives:**  
-Use the `requests` library to fetch API data, parse JSON responses, display selected information, and export structured data into a CSV file.
-**Task constraints:**  
-Must use the `requests` library and Python’s built-in `csv` module.
-**Expected behavior:**  
-Display the HTTP response status code.  
-Print all post titles retrieved from the API.  
-Create a CSV file named `posts.csv` containing the fields `id`, `title`, and `body`.  
-Properly handle successful responses before processing data.
-**Files:**  
-`task_02_requests.py`
+- **Status:** Mandatory
+- **Objective:** Understand and explain the differences between HTTP and HTTPS, the structure of HTTP requests and responses, and the most common HTTP methods and status codes.
+- **Constraint:** Conceptual/research task. Use browser DevTools, MDN documentation, and optional tools like Wireshark.
+- **Expected behavior:** Produce a clear summary of HTTP vs HTTPS (encryption), an outline of request/response structure, and annotated lists of at least 4 HTTP methods (GET, POST, PUT, DELETE) and 5 status codes (200, 201, 301, 404, 500).
+
+**Files:** *(conceptual task — no file submission)*
 
 ---
 
-### 3 - Develop a Simple API using Python with the `http.server` Module
+### Task 1 - Consume data from an API using command line tools (curl)
 
-**Task status:** Mandatory  
-**Task objectives:**  
-Build a minimal API using only Python’s standard library.
-**Task constraints:**  
-No external frameworks allowed.
-**Expected behavior:**  
-The root endpoint (`/`) returns a simple text message.  
-The `/data` endpoint returns JSON data.  
-The `/status` endpoint returns `OK`.  
-Undefined routes return a `404 Not Found` response.  
-Proper HTTP headers are set for JSON responses.
-**Files:**  
-`task_03_http_server.py`
+- **Status:** Mandatory
+- **Objective:** Install and use `curl` to interact with the JSONPlaceholder public API from the command line.
+- **Constraint:** Use `curl` flags including `-I` for headers only and `-X POST` with `-d` for POST requests.
+- **Expected behavior:** `curl https://jsonplaceholder.typicode.com/posts` returns a JSON array of posts. `curl -I` returns only headers. A POST request simulates creating a new post and returns a response with `id: 101`.
+
+**Files:** *(command-line task — no file submission)*
 
 ---
 
-### 4 - Develop a Simple API using Python with Flask
+### Task 2 - Consuming and processing data from an API using Python
 
-**Task status:** Mandatory  
-**Task objectives:**  
-Build a structured RESTful API using Flask, including dynamic routes and POST request handling.
-**Task constraints:**  
-Data must be stored in memory using a dictionary. No database allowed.
-**Expected behavior:**  
-The root route returns a welcome message.  
-The `/data` route returns a list of usernames.  
-The `/users/<username>` route returns the full user object or a `404` error if the user does not exist.  
-The `/add_user` route accepts a POST request with JSON data and:  
-Adds the user if the data is valid.  
-Returns `400` for invalid JSON.  
-Returns `400` if the username is missing.  
-Returns `409` if the username already exists.  
-Proper HTTP status codes are used for every response.
-**Files:**  
-`task_04_flask.py`
+- **Status:** Mandatory
+- **Objective:** Write two Python functions that fetch posts from JSONPlaceholder, print titles, and export data to a CSV file.
+- **Constraint:** Use the `requests` library. The `fetch_and_print_posts()` function prints the status code and all post titles. The `fetch_and_save_posts()` function writes `id`, `title`, and `body` columns to `posts.csv` using `csv.DictWriter`.
+- **Expected behavior:** Running the script prints `Status Code: 200` followed by all post titles, and generates a `posts.csv` file with 100 rows.
+
+**Files:** `task_02_requests.py`
 
 ---
 
-### 5 - Implement Basic and JWT Authentication with Role-Based Access
+### Task 3 - Develop a simple API using Python with the http.server module
 
-**Task status:** Mandatory  
-**Task objectives:**  
-Secure the Flask API using Basic Authentication and JWT, including role-based access control.
-**Task constraints:**  
-Passwords must be securely hashed.  
-JWT must use a secret key for token generation and validation.  
-All authentication errors must return HTTP `401 Unauthorized`.
-**Expected behavior:**  
-The `/basic-protected` route requires valid basic authentication credentials.  
-The `/login` route returns a JWT token when valid credentials are provided.  
-The `/jwt-protected` route requires a valid JWT token.  
-The `/admin-only` route requires an admin role.  
-Invalid or missing tokens return `401 Unauthorized`.  
-Non-admin access to the admin route returns `403 Forbidden`.
-**Files:**  
-`task_05_basic_security.py`
+- **Status:** Mandatory
+- **Objective:** Build a basic HTTP server from scratch using Python's `http.server` module with multiple endpoints.
+- **Constraint:** No third-party libraries. Use `BaseHTTPRequestHandler`. Serve correct `Content-Type` headers. Return 404 for undefined routes.
+- **Expected behavior:** `GET /` returns `"Hello, this is a simple API!"`. `GET /data` returns `{"name": "John", "age": 30, "city": "New York"}` as JSON. `GET /status` returns `"OK"`. Any other path returns a 404 with an appropriate message.
+
+**Files:** `task_03_http_server.py`
 
 ---
 
-## Authors
+### Task 4 - Develop a Simple API using Python with Flask
+
+- **Status:** Mandatory
+- **Objective:** Build a REST API using Flask with in-memory user storage, JSON responses, dynamic routes, and POST request handling with full validation.
+- **Constraint:** Users are stored in a dictionary (empty on push). No external database. Validate JSON, check for missing `username`, and handle duplicate entries with appropriate HTTP status codes (400, 404, 409).
+- **Expected behavior:** `GET /` returns a welcome message. `GET /data` returns a list of all usernames. `GET /status` returns `"OK"`. `GET /users/<username>` returns the full user object or a 404 error. `POST /add_user` adds a user and returns 201 with confirmation, or the appropriate error code.
+
+**Files:** `task_04_flask.py`
+
+---
+
+### Task 5 - API Security and Authentication Techniques
+
+- **Status:** Mandatory
+- **Objective:** Secure Flask API routes using both Basic HTTP Authentication and JWT token-based authentication, with role-based access control for admin-only routes.
+- **Constraint:** Use Flask-HTTPAuth for basic auth with hashed passwords via `werkzeug.security`. Use Flask-JWT-Extended for JWT. All authentication errors must consistently return 401. Admin-only access returns 403 for non-admin users. Custom JWT error handlers must be implemented.
+- **Expected behavior:** `GET /basic-protected` requires valid Basic Auth credentials and returns `"Basic Auth: Access Granted"`. `POST /login` returns a JWT token for valid credentials. `GET /jwt-protected` requires a valid JWT and returns `"JWT Auth: Access Granted"`. `GET /admin-only` returns `"Admin Access: Granted"` for admin users or `{"error": "Admin access required"}` with 403 for regular users.
+
+**Files:** `task_05_basic_security.py`
+
+---
+
+## 🤝 Contributions & Acknowledgements
+
+Thanks to the Holberton School team for a project that connects all the dots — from raw HTTP to secured, documented APIs. Special appreciation to the creators of Flask for making web development approachable without making it feel like you're assembling IKEA furniture blindfolded. Also, `curl` — the unsung hero of every developer's terminal.
+
+---
+
+## 👤 Author
+
 **Gwenaelle PICHOT**
 - Student at Holberton School
-- Track: Higher Level Programming
-- Project: RESTful API
+- Track: holbertonschool-higher_level_programming
+- Project: restful-api

@@ -1,270 +1,337 @@
-![SQL - Introduction Banner](assets/banner.jpg)
-
 # SQL - Introduction
 
-## Description
-This project introduces the fundamentals of SQL and relational databases through a series of progressive tasks executed on a MySQL server.  
-The objective is to manipulate databases directly from SQL scripts and understand how data is structured, stored, and queried in relational systems.
-
-Throughout the project, we explore how to create and delete databases, define tables, insert and manipulate records, and retrieve data using different SQL queries. By the end of the project, the database is no longer a mysterious black box but a structured environment where data can be organized, analyzed, and controlled with precise commands.
-
-In short: learning how to politely ask a database for information… and how to make sure it answers exactly what you expect.
+> Teaching a database to remember things, so I don't have to.
 
 ---
 
-## Learning Objectives
-By completing this project, the goal is to gain a solid understanding of relational databases and SQL. You should be able to explain what a database is, why relational databases are widely used, and how SQL (Structured Query Language) is used to interact with them.
+## 📝 Description
 
-The project also introduces MySQL as a database management system and demonstrates how to create databases, define tables, and manipulate stored data. You will learn the difference between DDL (Data Definition Language) and DML (Data Manipulation Language), and how each is used to structure and modify data.
-
-Finally, the exercises guide you through essential SQL operations such as selecting data, inserting new records, updating existing values, deleting entries, performing aggregations, grouping results, and using built-in SQL functions. By the end of the project, you should feel comfortable navigating and querying a relational database using SQL scripts.
+This project is my introduction to the world of relational databases and SQL (Structured Query Language). I learn how to interact with a MySQL server to create and manage databases, define and modify table structures, and manipulate data using the core SQL operations. From listing databases to writing complex queries with functions and subqueries, this project builds a solid foundation for working with data in a structured and reliable way.
 
 ---
 
-## Requirements
-- OS: Ubuntu 20.04 LTS / Ubuntu 22.04 LTS  
-- MySQL version: 8.0  
-- Allowed editors: `vi`, `vim`, `emacs`
+## 🎯 Learning Objectives
+
+By the end of this project, I am able to explain what a database is and what makes a relational database different from other storage systems. I know what SQL stands for and understand the role MySQL plays as a database management system. I can create databases and tables in MySQL and understand the distinction between DDL (Data Definition Language) operations like `CREATE` and `ALTER`, and DML (Data Manipulation Language) operations like `INSERT`, `UPDATE`, and `DELETE`. I am able to query data from tables using `SELECT` with filtering, ordering, and grouping, and I understand how to use MySQL built-in functions such as `COUNT`, `AVG`, and `MAX`. I also understand what subqueries are and how to use them to write more expressive SQL statements.
+
+---
+
+## 🛠️ Technologies Used
+
+This project uses MySQL 8.0 on Ubuntu 22.04 LTS. All scripts are plain SQL files executed via the MySQL command-line client. No external tools or libraries are required beyond a running MySQL server instance.
+
+---
+
+## ⚙️ Requirements
+
+- OS: Ubuntu 22.04 LTS
+- MySQL version: 8.0 (version 8.0.25+)
 - All files must end with a new line
-- All SQL keywords must be written in **uppercase**
-- Each SQL file must start with a comment describing the task
-- Each query must include a comment explaining what it does
-- The project must contain a `README.md` file at the root of the directory
+- All SQL queries must have a comment just before them explaining what they do
+- All files must start with a comment describing the task
+- All SQL keywords must be in uppercase (`SELECT`, `WHERE`, `CREATE`, etc.)
+- A README.md file at the root of the project folder is mandatory
+- File length is tested using `wc`
 
 ---
 
-## Usage / Execution
-All SQL scripts can be executed using the MySQL command line interface.
+## 🚀 Installation
 
-Example execution:
-
-```
-cat script.sql | mysql -hlocalhost -uroot -p database_name
+```bash
+git clone https://github.com/GwenP88/holbertonschool-higher_level_programming.git
+cd holbertonschool-higher_level_programming/SQL_introduction
 ```
 
-Or by connecting to MySQL and running the script manually:
-
+To install MySQL 8.0 on Ubuntu:
+```bash
+sudo apt update
+sudo apt install mysql-server
+mysql --version
 ```
-mysql -uroot -p 
-source script.sql;
-```
 
-Before running the scripts, ensure the MySQL service is started:
-
-```
+To start the MySQL service and connect:
+```bash
 service mysql start
+mysql -uroot
 ```
 
 ---
 
-## Project Progress
+## ▶️ Usage / Execution
+
+All SQL scripts are executed by piping them into the MySQL client:
+
+```bash
+cat script_name.sql | mysql -hlocalhost -uroot -p
+```
+
+For scripts that require a database argument:
+```bash
+cat script_name.sql | mysql -hlocalhost -uroot -p database_name
+```
+
+---
+
+## 📊 Project Progress
+
 <p align="center">
 <img src="assets/progress_barre_100.gif" alt="Mandatory tasks progress" width="80%">
 </p>
 
 <p align="center">
-<sub>Mandatory tasks completion: 100% ---  Advanced tasks completion: 25%</sub>
+<sub>Mandatory tasks completion: 100% --- Advanced tasks completion: 0%</sub>
 </p>
 
 ---
 
-## Tasks
+## ✨ Features
 
-### 0 - List databases
-- **Task status:** Mandatory  
-- Lists all databases available on the MySQL server.  
-- Introduces basic database inspection commands.  
-- **Expected behavior:** display all existing databases.
+### Task 0 - List databases
 
-**Files**
-- `0-list_databases.sql`
+- **Status:** Mandatory
+- **Objective:** Write a script that lists all databases on the MySQL server.
+- **Constraint:** Standard SQL only.
+- **Expected behavior:** Outputs all existing databases, including `information_schema`, `mysql`, `performance_schema`, and `sys`.
 
----
-
-### 1 - Create a database
-- **Task status:** Mandatory  
-- Creates the database `hbtn_0c_0` if it does not already exist.  
-- Ensures the script does not fail when the database already exists.
-
-**Files**
-- `1-create_database_if_missing.sql`
+**Files:** `0-list_databases.sql`
 
 ---
 
-### 2 - Delete a database
-- **Task status:** Mandatory  
-- Deletes the database `hbtn_0c_0` if it exists.  
-- The script must not fail if the database does not exist.
+### Task 1 - Create a database
 
-**Files**
-- `2-remove_database.sql`
+- **Status:** Mandatory
+- **Objective:** Write a script that creates the database `hbtn_0c_0` if it does not already exist.
+- **Constraint:** Must not fail if the database already exists. `SELECT` and `SHOW` statements are not allowed.
+- **Expected behavior:** The database is created silently, with no error if it already exists.
 
----
-
-### 3 - List tables
-- **Task status:** Mandatory  
-- Lists all tables of a specified database.
-
-**Files**
-- `3-list_tables.sql`
+**Files:** `1-create_database_if_missing.sql`
 
 ---
 
-### 4 - First table
-- **Task status:** Mandatory  
-- Creates a table called `first_table` with two fields: `id` and `name`.
+### Task 2 - Delete a database
 
-**Files**
-- `4-first_table.sql`
+- **Status:** Mandatory
+- **Objective:** Write a script that deletes the database `hbtn_0c_0` if it exists.
+- **Constraint:** Must not fail if the database does not exist. `SELECT` and `SHOW` statements are not allowed.
+- **Expected behavior:** The database is dropped silently, with no error if it does not exist.
 
----
-
-### 5 - Full description
-- **Task status:** Mandatory  
-- Displays the full structure used to create the table `first_table`.
-
-**Files**
-- `5-full_table.sql`
+**Files:** `2-remove_database.sql`
 
 ---
 
-### 6 - List all in table
-- **Task status:** Mandatory  
-- Displays all rows stored in the table `first_table`.
+### Task 3 - List tables
 
-**Files**
-- `6-list_values.sql`
+- **Status:** Mandatory
+- **Objective:** Write a script that lists all tables in a given database.
+- **Constraint:** The database name is passed as an argument to the `mysql` command.
+- **Expected behavior:** All table names in the specified database are listed.
 
----
-
-### 7 - First add
-- **Task status:** Mandatory  
-- Inserts a new record into `first_table`.
-
-**Files**
-- `7-insert_value.sql`
+**Files:** `3-list_tables.sql`
 
 ---
 
-### 8 - Count 89
-- **Task status:** Mandatory  
-- Counts how many records have the value `id = 89`.
+### Task 4 - First table
 
-**Files**
-- `8-count_89.sql`
+- **Status:** Mandatory
+- **Objective:** Write a script that creates a table called `first_table` with columns `id INT` and `name VARCHAR(256)`.
+- **Constraint:** Must not fail if the table already exists. `SELECT` and `SHOW` statements are not allowed. Database name is passed as an argument.
+- **Expected behavior:** The table is created in the current database without error.
 
----
-
-### 9 - Full creation
-- **Task status:** Mandatory  
-- Creates the table `second_table` and inserts several records.
-
-**Files**
-- `9-full_creation.sql`
+**Files:** `4-first_table.sql`
 
 ---
 
-### 10 - List by best
-- **Task status:** Mandatory  
-- Lists all records ordered by score in descending order.
+### Task 5 - Full description
 
-**Files**
-- `10-top_score.sql`
+- **Status:** Mandatory
+- **Objective:** Write a script that prints the full creation statement for `first_table`.
+- **Constraint:** `DESCRIBE` and `EXPLAIN` statements are not allowed. Database name is passed as an argument.
+- **Expected behavior:** Displays the `CREATE TABLE` statement for `first_table`, including column definitions, engine, and charset.
 
----
-
-### 11 - Select the best
-- **Task status:** Mandatory  
-- Displays records where the score is greater than or equal to 10.
-
-**Files**
-- `11-best_score.sql`
+**Files:** `5-full_table.sql`
 
 ---
 
-### 12 - Cheating is bad
-- **Task status:** Mandatory  
-- Updates Bob's score to 10 without using his ID.
+### Task 6 - List all in table
 
-**Files**
-- `12-no_cheating.sql`
+- **Status:** Mandatory
+- **Objective:** Write a script that lists all rows and all fields from `first_table`.
+- **Constraint:** Database name is passed as an argument.
+- **Expected behavior:** All rows in `first_table` are displayed. If the table is empty, nothing is returned.
 
----
-
-### 13 - Score too low
-- **Task status:** Mandatory  
-- Removes records where the score is lower than or equal to 5.
-
-**Files**
-- `13-change_class.sql`
+**Files:** `6-list_values.sql`
 
 ---
 
-### 14 - Average
-- **Task status:** Mandatory  
-- Computes the average score of all records in `second_table`.
+### Task 7 - First add
 
-**Files**
-- `14-average.sql`
+- **Status:** Mandatory
+- **Objective:** Write a script that inserts a new row into `first_table` with `id = 89` and `name = 'Best School'`.
+- **Constraint:** Database name is passed as an argument.
+- **Expected behavior:** The row is inserted. Running the script multiple times inserts multiple identical rows.
 
----
-
-### 15 - Number by score
-- **Task status:** Mandatory  
-- Groups records by score and counts how many share the same score.
-
-**Files**
-- `15-groups.sql`
+**Files:** `7-insert_value.sql`
 
 ---
 
-### 16 - Say my name
-- **Task status:** Mandatory  
-- Lists records where the `name` column contains a value.
+### Task 8 - Count 89
 
-**Files**
-- `16-no_link.sql`
+- **Status:** Mandatory
+- **Objective:** Write a script that displays the number of records with `id = 89` in `first_table`.
+- **Constraint:** Database name is passed as an argument.
+- **Expected behavior:** Returns the count of matching rows as a single number.
 
----
-
-### 17 - Go to UTF8
-- **Task status:** Advanced  
-- Converts the database and table encoding to `utf8mb4`.
-
-**Files**
-- `100-move_to_utf8.sql`
+**Files:** `8-count_89.sql`
 
 ---
 
-### 18 - Temperatures #0
-- **Task status:** Advanced  
-- Displays the average temperature by city ordered by temperature.
+### Task 9 - Full creation
 
-**Files**
-- `101-avg_temperatures.sql`
+- **Status:** Mandatory
+- **Objective:** Write a script that creates `second_table` with columns `id INT`, `name VARCHAR(256)`, and `score INT`, and inserts four specific records.
+- **Constraint:** Must not fail if the table already exists. `SELECT` and `SHOW` are not allowed. Database name is passed as an argument.
+- **Expected behavior:** The table is created and populated with John (10), Alex (3), Bob (14), and George (8).
 
----
-
-### 19 - Temperatures #1
-- **Task status:** Advanced  
-- Displays the top 3 cities with the highest average temperatures during July and August.
-
-**Files**
-- `102-top_city.sql`
+**Files:** `9-full_creation.sql`
 
 ---
 
-### 20 - Temperatures #2
-- **Task status:** Advanced  
-- Displays the maximum temperature recorded for each state.
+### Task 10 - List by best
 
-**Files**
-- `103-max_state.sql`
+- **Status:** Mandatory
+- **Objective:** Write a script that lists all records from `second_table`, ordered by score descending, displaying score and name.
+- **Constraint:** Database name is passed as an argument.
+- **Expected behavior:** Output shows records from highest to lowest score: Bob (14), John (10), George (8), Alex (3).
+
+**Files:** `10-top_score.sql`
 
 ---
 
-## Authors
+### Task 11 - Select the best
+
+- **Status:** Mandatory
+- **Objective:** Write a script that lists all records with `score >= 10` from `second_table`, ordered by score descending.
+- **Constraint:** Database name is passed as an argument.
+- **Expected behavior:** Only Bob (14) and John (10) are displayed.
+
+**Files:** `11-best_score.sql`
+
+---
+
+### Task 12 - Cheating is bad
+
+- **Status:** Mandatory
+- **Objective:** Write a script that updates Bob's score to `10` using only the `name` field (not the `id`).
+- **Constraint:** Cannot use Bob's `id` value. Database name is passed as an argument.
+- **Expected behavior:** Bob's score changes from 14 to 10. John and Bob are now tied at 10.
+
+**Files:** `12-no_cheating.sql`
+
+---
+
+### Task 13 - Score too low
+
+- **Status:** Mandatory
+- **Objective:** Write a script that removes all records with `score <= 5` from `second_table`.
+- **Constraint:** Database name is passed as an argument.
+- **Expected behavior:** Alex (score 3) is removed. John, Bob, and George remain.
+
+**Files:** `13-change_class.sql`
+
+---
+
+### Task 14 - Average
+
+- **Status:** Mandatory
+- **Objective:** Write a script that computes the average score of all records in `second_table`, with the result column labeled `average`.
+- **Constraint:** Database name is passed as an argument.
+- **Expected behavior:** Returns the average score as a decimal value (e.g., `9.3333`).
+
+**Files:** `14-average.sql`
+
+---
+
+### Task 15 - Number by score
+
+- **Status:** Mandatory
+- **Objective:** Write a script that lists each distinct score and the number of records with that score from `second_table`, sorted by count descending.
+- **Constraint:** Result columns must be named `score` and `number`. Database name is passed as an argument.
+- **Expected behavior:** Displays each score alongside how many records share it, most frequent first.
+
+**Files:** `15-groups.sql`
+
+---
+
+### Task 16 - Say my name
+
+- **Status:** Mandatory
+- **Objective:** Write a script that lists all records from `second_table` where the `name` column is not empty, displaying score and name ordered by score descending.
+- **Constraint:** Rows with no name value must be excluded. Database name is passed as an argument.
+- **Expected behavior:** Only records with a non-empty `name` are listed, sorted by descending score.
+
+**Files:** `16-no_link.sql`
+
+---
+
+### Task 17 - Go to UTF8
+
+- **Status:** Advanced - **This task is still in progress — my future self is on it.**
+- **Objective:** Write a script that converts the `hbtn_0c_0` database, `first_table` table, and its `name` field to `utf8mb4` with `utf8mb4_unicode_ci` collation.
+- **Constraint:** Must convert the database, the table, and the specific field.
+- **Expected behavior:** The `SHOW CREATE TABLE first_table` output reflects the `utf8mb4_unicode_ci` charset and collation.
+
+**Files:** `100-move_to_utf8.sql`
+
+---
+
+### Task 18 - Temperatures #0
+
+- **Status:** Advanced - **This task is still in progress — my future self is on it.**
+- **Objective:** Write a script that displays the average temperature (Fahrenheit) per city from an imported temperature dump, ordered by temperature descending.
+- **Constraint:** Requires importing the provided SQL dump. Database name is passed as an argument.
+- **Expected behavior:** Lists all cities with their average temperature, from hottest to coolest.
+
+**Files:** `101-avg_temperatures.sql`
+
+---
+
+### Task 19 - Temperatures #1
+
+- **Status:** Advanced - **This task is still in progress — my future self is on it.**
+- **Objective:** Write a script that displays the top 3 cities by average temperature during July and August, ordered descending.
+- **Constraint:** Filter by month (July = 7, August = 8). Database name is passed as an argument.
+- **Expected behavior:** Returns Naperville, San Diego, and Sunnyvale as the top 3 summer cities.
+
+**Files:** `102-top_city.sql`
+
+---
+
+### Task 20 - Temperatures #2
+
+- **Status:** Advanced - **This task is still in progress — my future self is on it.**
+- **Objective:** Write a script that displays the maximum temperature per state, ordered by state name.
+- **Constraint:** Database name is passed as an argument.
+- **Expected behavior:** Each state is listed once with its maximum recorded temperature. AZ, CA, and IL all top at 110°F.
+
+**Files:** `103-max_state.sql`
+
+---
+
+## 🔮 What’s Next
+
+I plan to continue working on this project by completing the advanced tasks that are not done yet. This will allow me to deepen my understanding, improve my skills, and push a bit further beyond the basics (because stopping halfway is not really my style).
+
+---
+
+## 🤝 Contributions & Acknowledgements
+
+Thanks to the Holberton School team for a project that makes SQL feel less like a foreign language and more like a superpower. Special acknowledgement to MySQL for being simultaneously frustrating and deeply satisfying — there is real joy in watching a clean `SELECT` return exactly what you asked for.
+
+---
+
+## 👤 Author
+
 **Gwenaelle PICHOT**
 - Student at Holberton School
-- Track: Higher Level Programming
-- Project: SQL - Introduction
+- Track: holbertonschool-higher_level_programming
+- Project: SQL_introduction

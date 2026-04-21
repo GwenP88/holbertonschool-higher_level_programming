@@ -1,5 +1,5 @@
 <p align="center">
-  <img src="./assets/banner.jpg" alt="holbertonschool-higher-level-programming Banner" width="800">
+  <img src="./assets/banner.jpg" alt="holbertonschool-higher-level-programming Banner" width="400">
 </p>
 
 # Python - Classes and Objects

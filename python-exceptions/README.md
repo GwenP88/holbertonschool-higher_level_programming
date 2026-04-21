@@ -1,3 +1,7 @@
+<p align="center">
+  <img src="./assets/banner.jpeg" alt="holbertonschool-higher-level-programming Banner" width="500">
+</p>
+
 # Python - Exceptions
 
 > Because things go wrong — and a good developer is ready for it.

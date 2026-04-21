@@ -1,3 +1,7 @@
+<p align="center">
+  <img src="./assets/banner.jpeg" alt="holbertonschool-higher-level-programming Banner" width="600">
+</p>
+
 # Python - Test-driven Development
 
 > Write the test first, then write the code — it's not backwards, it's brilliant.

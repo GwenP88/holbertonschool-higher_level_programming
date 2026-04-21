@@ -1,3 +1,7 @@
+<p align="center">
+  <img src="./assets/banner.jpeg" alt="holbertonschool-higher-level-programming Banner" width="400">
+</p>
+
 # Python - Everything is Object
 
 > Before you touch the interpreter, read, think, and reason — then verify.

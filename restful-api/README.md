@@ -1,3 +1,7 @@
+<p align="center">
+  <img src="./assets/banner.jpeg" alt="holbertonschool-higher-level-programming Banner" width="600">
+</p>
+
 # RESTful API
 
 > Building, consuming, securing, and documenting APIs — because data doesn't move itself.

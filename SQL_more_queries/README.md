@@ -1,3 +1,7 @@
+<p align="center">
+  <img src="./assets/banner.jpg" alt="holbertonschool-higher-level-programming Banner" width="600">
+</p>
+
 # SQL - More Queries
 
 > More tables, more joins, more power. SQL is not just a query language — it's an art form.

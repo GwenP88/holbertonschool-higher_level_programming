@@ -1,3 +1,7 @@
+<p align="center">
+  <img src="./assets/banner.jpg" alt="holbertonschool-higher-level-programming Banner" width="600">
+</p>
+
 # SQL - Introduction
 
 > Teaching a database to remember things, so I don't have to.

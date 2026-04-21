@@ -1,3 +1,7 @@
+<p align="center">
+  <img src="./assets/banner.jpeg" alt="holbertonschool-higher-level-programming Banner" width="500">
+</p>
+
 # Python - Data Structures: Lists, Tuples
 
 > From zero to hero with lists and tuples — Python's most essential data containers.

@@ -1,3 +1,7 @@
+<p align="center">
+  <img src="./assets/banner.jpeg" alt="holbertonschool-higher-level-programming Banner" width="400">
+</p>
+
 # JavaScript - Warm Up
 
 > First contact with JavaScript — variables, loops, functions, and the realization that `var` is best left in the past.

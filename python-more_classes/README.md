@@ -1,3 +1,7 @@
+<p align="center">
+  <img src="./assets/banner.jpeg" alt="holbertonschool-higher-level-programming Banner" width="400">
+</p>
+
 # Python - More Classes and Objects
 
 > Rectangles, class attributes, static methods, and the N Queens problem — OOP is getting serious.

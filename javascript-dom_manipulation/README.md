@@ -1,3 +1,7 @@
+<p align="center">
+  <img src="./assets/banner.jpeg" alt="holbertonschool-higher-level-programming Banner" width="800">
+</p>
+
 # JavaScript - DOM Manipulation
 
 > Making web pages interactive — because a static page is just a very slow PDF.

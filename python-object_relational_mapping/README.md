@@ -1,3 +1,7 @@
+<p align="center">
+  <img src="./assets/banner.jpeg" alt="holbertonschool-higher-level-programming Banner" width="400">
+</p>
+
 # Python - Object-Relational Mapping
 
 > Bridging Python and MySQL — because raw SQL strings are so last decade.

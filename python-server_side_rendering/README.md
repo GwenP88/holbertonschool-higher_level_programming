@@ -1,3 +1,7 @@
+<p align="center">
+  <img src="./assets/banner.jpeg" alt="holbertonschool-higher-level-programming Banner" width="400">
+</p>
+
 # Python - Server-Side Rendering
 
 > Flask + Jinja: generating HTML on the server so browsers don't have to suffer.

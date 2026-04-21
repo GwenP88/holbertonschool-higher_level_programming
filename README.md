@@ -1,4 +1,6 @@
-![Python Banner](assets/banner.png)
+<p align="center">
+  <img src="./assets/banner.png" alt="holbertonschool-higher-level-programming Banner" width="800">
+</p>
 
 ## Introduction
 

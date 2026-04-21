@@ -1,3 +1,7 @@
+<p align="center">
+  <img src="./assets/banner.jpeg" alt="holbertonschool-higher-level-programming Banner" width="400">
+</p>
+
 # Python - import & modules
 
 > Why write everything yourself when Python lets you borrow from others? (Legally, this time.)

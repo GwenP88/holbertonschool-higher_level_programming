@@ -1,3 +1,7 @@
+<p align="center">
+  <img src="./assets/banner.png" alt="holbertonschool-higher-level-programming Banner" width="800">
+</p>
+
 # Python - if/else, Loops, Functions
 
 > Teaching Python to make decisions, go in circles, and do things on command — just like a well-trained intern.

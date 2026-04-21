@@ -1,3 +1,7 @@
+<p align="center">
+  <img src="./assets/banner.jpeg" alt="holbertonschool-higher-level-programming Banner" width="500">
+</p>
+
 # Python - Abstract Classes, Interfaces, and OOP Design Patterns
 
 > Abstract, inherit, mix, override — the full OOP toolkit, no assembly required.

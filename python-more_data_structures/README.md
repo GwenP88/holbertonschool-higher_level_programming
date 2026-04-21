@@ -1,3 +1,7 @@
+<p align="center">
+  <img src="./assets/banner.jpeg" alt="holbertonschool-higher-level-programming Banner" width="600">
+</p>
+
 # Python - More Data Structures: Set, Dictionary
 
 > Sets, dicts, lambdas, and the magical trio of map/filter/reduce — because lists alone just aren't enough.

@@ -1,3 +1,7 @@
+<p align="center">
+  <img src="./assets/banner.jpeg" alt="holbertonschool-higher-level-programming Banner" width="600">
+</p>
+
 # Python - Input / Output
 
 > Files, JSON, and Pascal's Triangle — because data that can't be saved is just a memory leak waiting to happen.

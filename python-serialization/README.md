@@ -1,3 +1,7 @@
+<p align="center">
+  <img src="./assets/banner.jpeg" alt="holbertonschool-higher-level-programming Banner" width="600">
+</p>
+
 # Python - Serialization
 
 > From Python objects to JSON, pickle, CSV, XML, and even across a network — data finds a way.

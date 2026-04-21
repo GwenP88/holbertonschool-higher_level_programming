@@ -1,3 +1,7 @@
+<p align="center">
+  <img src="./assets/banner.jpg" alt="holbertonschool-higher-level-programming Banner" width="800">
+</p>
+
 # Python - Classes and Objects
 
 > Welcome to the world of OOP — where everything is an object, even your mistakes.

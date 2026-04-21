@@ -1,3 +1,7 @@
+<p align="center">
+  <img src="./assets/banner.jpeg" alt="holbertonschool-higher-level-programming Banner" width="400">
+</p>
+
 # Python - Hello, World
 
 > My first steps into Python — printing things, slicing strings, and discovering that there are ten ways to do everything.

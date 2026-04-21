@@ -1,3 +1,7 @@
+<p align="center">
+  <img src="./assets/banner.jpeg" alt="holbertonschool-higher-level-programming Banner" width="800">
+</p>
+
 # Python - Inheritance
 
 > Standing on the shoulders of classes — because rewriting everything from scratch is so last year.

@@ -1,5 +1,5 @@
 <p align="center">
-  <img src="./assets/banner.jpeg" alt="holbertonschool-higher-level-programming Banner" width="400">
+  <img src="./assets/banner.jpeg" alt="holbertonschool-higher-level-programming Banner" width="600">
 </p>
 
 # Python - import & modules
